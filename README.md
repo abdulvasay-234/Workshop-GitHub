@@ -13,6 +13,22 @@
 
 <!--                               Adding link -->
  - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 website </a>
+ 
+ 
+ 
+ <!--                          intro         -->
+ 
+ # Introduction to GitHub
+
+_Get started using GitHub._
+
+- **Who is this for**: Students and new GitHub users.
+- **What you'll learn**: We'll introduce Open-Source, version control, repositories, branches, commits, Issues and Pull requests.
+- **What you'll build**: We'll make a Markdown file for the Profile README and Static Website.
+- **Prerequisites**: None. This course is a great introduction for your first day on GitHub.
+- **How long**: This course will take you approximately 3.5 hours to complete.
+ 
+ 
 
 <!--                             Connect with me  -->
 ## Connect with me
@@ -32,6 +48,7 @@ This repositry is uder MIT License. By contributing, you agree that your contrib
 <a href = "https://github.com/afnanabdulvasay-234/Workshop-GitHub/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=afnanabdulvasay-234/Workshop-GitHub"/>
 </a>
+
 
 
 
