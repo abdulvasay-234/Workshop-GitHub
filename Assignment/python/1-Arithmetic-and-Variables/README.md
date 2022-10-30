@@ -26,6 +26,8 @@ print(births_per_day)
 ```
 If you execute the above program you will get `births_per_day = 360000`
 
+To submit the answer [click here.](https://github.com/afnanabdulvasay-234/Workshop-GitHub/blob/python-assignment/Assignment/python/1-Arithmetic-and-Variables/1-Arithmetic-and-Variables.py)
+
 Remember you can get a hint if you need it.
 <details>
   <summary><h2>Hint</h2></summary>
