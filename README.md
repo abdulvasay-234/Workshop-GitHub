@@ -12,7 +12,7 @@
 
 
 <!--                               Adding link -->
- - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 website </a>
+ - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 Technical blog </a>
  
  
  
