@@ -9,7 +9,7 @@ Imagine you are organizing an event in college, Write a python code to take the 
 - Department
 
 
-#### when you execute the program the out should be:
+#### when you execute the program the output should be:
 <pre>
 Hello Octacat! welcome to the event
 </pre>
