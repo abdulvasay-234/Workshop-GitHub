@@ -15,6 +15,8 @@ Welcome to Liet college.
  Create a variable called name of type **college** and assign it the value `Liet`
  </details>
 
+## TASK-2: Working With number
+
 write a program to enter marks of the students
 - java marks
 - python marks
