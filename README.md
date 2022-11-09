@@ -5,14 +5,14 @@
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/afnanabdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/afnanabdulvasay-234/Workshop-GitHub/pulls/)
 
 <!--                              Logo and heading -->
-# Workshop-GitHub ![](Images/_40%20×%2040px%20(48%20×%2048px).png)
+# Workshop-GitHub ![](https://github.com/octocat/octocat.github.io/blob/master/images/blacktocat.png)
  
  <!--                             Adding banner -->
 ![workshop-banner](Images/GitHub-banner%20(1).png)
 
 
 <!--                               Adding link -->
- - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 website </a>
+ - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 Technical blog </a>
  
  
  
