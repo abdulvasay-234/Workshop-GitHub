@@ -8,7 +8,7 @@
 # Workshop-GitHub ![](https://github.com/octocat/octocat.github.io/blob/master/images/blacktocat.png)
  
  <!--                             Adding banner -->
-![workshop-banner](Images/GitHub-banner%20(1).png)
+![workshop-banner](Images/b.png)
 
 
 <!--                               Adding link -->
