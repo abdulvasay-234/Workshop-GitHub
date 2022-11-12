@@ -43,12 +43,12 @@ _Get started using GitHub._
 ## License
 This repositry is uder MIT License. By contributing, you agree that your contributions will be licensed under its <a href="https://github.com/afnanabdulvasay-234/Workshop-GitHub/blob/main/LICENCE"> MIT License.</a>
 
-<!--                             contributers    -->
+<!--                             contributers    
 ## Thanks to all the contributors ❤️
 <a href = "https://github.com/afnanabdulvasay-234/Workshop-GitHub/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=afnanabdulvasay-234/Workshop-GitHub"/>
 </a>
 
 
-
+-->
 
