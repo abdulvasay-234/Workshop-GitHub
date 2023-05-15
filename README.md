@@ -1,8 +1,8 @@
 <!--                   INFO        -->
-[![GitHub license](https://img.shields.io/github/license/afnanabdulvasay-234/Workshop-GitHub.svg)](https://github.com/afnanabdulvasay-234/Workshop-GitHub/blob/main/LICENCE)
-[![GitHub contributors](https://img.shields.io/github/contributors/afnanabdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/afnanabdulvasay-234/Workshop-GitHub/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/afnanabdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/afnanabdulvasay-234/Workshop-GitHub/issues/)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/afnanabdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/afnanabdulvasay-234/Workshop-GitHub/pulls/)
+[![GitHub license](https://img.shields.io/github/license/abdulvasay-234/Workshop-GitHub.svg)](https://github.com/abdulvasay-234/Workshop-GitHub/blob/main/LICENCE)
+[![GitHub contributors](https://img.shields.io/github/contributors/abdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/abdulvasay-234/Workshop-GitHub/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/abdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/abdulvasay-234/Workshop-GitHub/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/abdulvasay-234/Workshop-GitHub.svg)](https://GitHub.com/abdulvasay-234/Workshop-GitHub/pulls/)
 
 <!--                              Logo and heading -->
 # Workshop-GitHub ![](https://github.com/octocat/octocat.github.io/blob/master/images/blacktocat.png)
@@ -12,7 +12,7 @@
 
 
 <!--                               Adding link -->
- - <a href="http://afnanabdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 Technical blog </a>
+ - <a href="http://abdulvasay-234.github.io/techavblog/" style="background-color:#FFFFFF;color:#000000;text-decoration:none">🧑‍💻 Technical blog </a>
  
  
  
@@ -41,7 +41,7 @@ _Get started using GitHub._
 
 <!--                                License       -->
 ## License
-This repositry is uder MIT License. By contributing, you agree that your contributions will be licensed under its <a href="https://github.com/afnanabdulvasay-234/Workshop-GitHub/blob/main/LICENCE"> MIT License.</a>
+This repositry is uder MIT License. By contributing, you agree that your contributions will be licensed under its <a href="https://github.com/abdulvasay-234/Workshop-GitHub/blob/main/LICENCE"> MIT License.</a>
 
 <!--                             contributers    
 ## Thanks to all the contributors ❤️
