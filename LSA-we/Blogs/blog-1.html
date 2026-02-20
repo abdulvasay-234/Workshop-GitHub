@@ -1,0 +1,2342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to choose the right programming career path. Discover key career options, essential skills, and practical advice from the Lords Skill Academy team.">
+    <meta name="keywords" content="programming career, career guidance, programming paths, coding careers, skill development">
+    <meta name="author" content="Lords Skill Academy">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="How to Choose the Right Programming Career | Lords Skill Academy">
+    <meta property="og:description" content="Learn how to choose the right programming career path. Discover key career options, essential skills, and practical advice.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lordsskillacademy.com/how-to-choose-programming-career">
+    <meta property="og:image" content="https://lordsskillacademy.com/images/blog-programming-career.jpg">
+    <meta name="article:published_time" content="2026-01-15">
+    <meta name="article:author" content="Lords Skill Academy">
+    <title>How to Choose the Right Programming Career | Lords Skill Academy</title>
+    <link rel="canonical" href="https://lordsskillacademy.com/how-to-choose-programming-career">
+    
+    <style>
+        /* ===================================
+           RESET & BASE STYLES
+        =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        /* ===================================
+           TECH ANIMATIONS & EFFECTS
+        =================================== */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(0, 212, 255, 0.2), 0 0 15px rgba(0, 212, 255, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(0, 212, 255, 0.4), 0 0 25px rgba(0, 212, 255, 0.2);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes borderGlow {
+            0% {
+                border-color: rgba(0, 212, 255, 0.2);
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+            }
+            50% {
+                border-color: rgba(0, 212, 255, 0.5);
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            }
+            100% {
+                border-color: rgba(0, 212, 255, 0.2);
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+            }
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Scroll reveal initial state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .reveal.active {
+            animation: revealUp 0.7s ease-out forwards;
+        }
+
+        /* ===================================
+           UTILITY CLASSES
+        =================================== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .container-wide {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            font-size: clamp(0.9rem, 2vw, 1.05rem);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(120deg, #7f1d1d, #991b1b, #b91c1c);
+            color: #ffffff;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px) scale(1.01);
+            border-color: rgba(127, 29, 29, 0.7);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28), 0 0 18px rgba(127, 29, 29, 0.5);
+            filter: brightness(1.15);
+        }
+
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.04);
+            color: #1e40af;
+            border: 2px solid rgba(30, 64, 175, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(30, 64, 175, 0.12);
+            color: #0b1224;
+            border-color: #00d4ff;
+            box-shadow: 0 0 18px rgba(0, 212, 255, 0.25);
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: #1e40af;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-white:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+            line-height: 1.2;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #1f2937 0%, #1e40af 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: floatIn 0.8s ease-out;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* ===================================
+           HEADER STYLES
+        =================================== */
+        .header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 0.5rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: clamp(120px, 20vw, 160px);
+            height: auto;
+            background-color: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: #4b5563;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #1e40af;
+            text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, #1e40af);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+            box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+        }
+
+        /* ===================================
+           HERO SECTION
+        =================================== */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(30, 58, 138, 0.95)),
+                        url('imgs/home/code.jpg') center/cover no-repeat;
+            background-color: #1e40af;
+            color: #ffffff;
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.03) 50%, transparent 70%),
+                linear-gradient(-45deg, transparent 30%, rgba(138, 43, 226, 0.03) 50%, transparent 70%);
+            background-size: 100% 100%, 100% 100%;
+            pointer-events: none;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        .hero > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===================================
+           TRUST BAR & IMPACT
+        =================================== */
+        .trust-bar {
+            color: #e2e8f0;
+            padding: 2rem 0 0 0;
+            margin-bottom: 0;
+        }
+
+        .liet-initiative {
+            background-color: #0f172a;
+            border: none;
+            border-radius: 0;
+            padding: 1.5rem 1rem;
+            margin: 0 calc(-50vw + 50%);
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .liet-scroll {
+            display: flex;
+            gap: 2rem;
+            animation: scrollLeft 20s linear infinite;
+            width: fit-content;
+            min-width: 200%;
+        }
+
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .liet-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        .liet-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            white-space: nowrap;
+            padding: 0 1rem;
+        }
+
+        .liet-item img {
+            height: 40px;
+            width: auto;
+            background: #fff;
+            border-radius: 6px;
+            padding: 4px 8px;
+        }
+
+        .liet-text {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #93c5fd;
+            letter-spacing: 0.5px;
+        }
+
+        .trust-bar .trust-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        .trust-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(226, 232, 240, 0.2);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.04);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .trust-pill img {
+            height: 32px;
+            width: auto;
+            background: #fff;
+            border-radius: 6px;
+            padding: 4px 6px;
+        }
+
+        .trust-muted {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .impact-section {
+            background-color: #f8fafc;
+            padding: 3rem 0;
+            margin-top: 0;
+        }
+
+        .impact-grid {
+            background: linear-gradient(145deg, rgba(14, 165, 233, 0.06), rgba(59, 130, 246, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            border-radius: 14px;
+            padding: 1.5rem;
+            display: grid;
+            gap: 0.5rem;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255,255,255,0.08);
+            transition: all 0.3s ease, box-shadow 0.4s ease;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: grid;
+            gap: 0.5rem;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease, box-shadow 0.4s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-4px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 12px rgba(0, 212, 255, 0.3), 0 0 24px rgba(0, 212, 255, 0.15), 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .impact-number {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: #1e40af;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .impact-label {
+            color: #334155;
+            font-weight: 600;
+        }
+
+        .impact-desc {
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.875rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-description {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===================================
+           AFFILIATION SECTION
+        =================================== */
+        .affiliation {
+            background-color: #f9fafb;
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .affiliation-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .affiliation-text {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .affiliation-logo img {
+            width: clamp(120px, 20vw, 160px);
+            height: auto;
+            background-color: #ffffff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .affiliation-support {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        /* ===================================
+           SCHOOLS OVERVIEW SECTION
+        =================================== */
+        .schools {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .school-card {
+            background: linear-gradient(145deg, rgba(14, 165, 233, 0.06), rgba(59, 130, 246, 0.04));
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.18);
+        }
+
+        .school-card:hover {
+            transform: translateY(-8px);
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.28), 0 0 30px rgba(138, 43, 226, 0.12), 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .school-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            color: #6366f1;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .school-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        .school-content {
+            padding: 2rem;
+        }
+
+        .school-title {
+            font-size: clamp(1.375rem, 3vw, 1.75rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .school-description {
+            font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           WHY LSA SECTION
+        =================================== */
+        .why-lsa {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            background: linear-gradient(145deg, rgba(14, 165, 233, 0.05), rgba(99, 102, 241, 0.04));
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease, box-shadow 0.4s ease;
+            border: 1px solid rgba(138, 43, 226, 0.16);
+        }
+
+        .why-item:hover {
+            transform: translateY(-4px);
+            border-color: #8a2be2;
+            box-shadow: 0 0 12px rgba(138, 43, 226, 0.28), 0 0 24px rgba(0, 212, 255, 0.1), 0 12px 28px rgba(0, 0, 0, 0.2);
+        }
+
+        .why-icon {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .why-content h3 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+
+        .why-content p {
+            font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* ===================================
+           LEARNING EXPERIENCE SECTION
+        =================================== */
+        .learning-experience {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .learning-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .learning-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3b82f6;
+            font-weight: 500;
+        }
+
+        /* ===================================
+           PROGRAM ROADMAP
+        =================================== */
+        .roadmap {
+            padding: 4rem 0;
+            background: #0b1224;
+            background-image: 
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(0, 212, 255, 0.03) 0px,
+                    rgba(0, 212, 255, 0.03) 1px,
+                    transparent 1px,
+                    transparent 50px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(0, 212, 255, 0.03) 0px,
+                    rgba(0, 212, 255, 0.03) 1px,
+                    transparent 1px,
+                    transparent 50px
+                );
+            color: #e2e8f0;
+            position: relative;
+        }
+
+        .roadmap-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+        }
+
+        .roadmap-card {
+            background: linear-gradient(160deg, rgba(59, 130, 246, 0.16), rgba(14, 165, 233, 0.12));
+            border: 1px solid rgba(0, 212, 255, 0.28);
+            border-radius: 14px;
+            padding: 1.35rem;
+            display: grid;
+            gap: 0.5rem;
+            position: relative;
+            transition: all 0.3s ease, box-shadow 0.4s ease;
+        }
+
+        .roadmap-card:hover {
+            border-color: #00ffff;
+            transform: translateY(-4px);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.25), 0 0 30px rgba(255, 0, 255, 0.1), inset 0 0 12px rgba(0, 255, 255, 0.05), 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .roadmap-step {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #1e40af;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            box-shadow: 0 0 12px rgba(0, 212, 255, 0.3), inset 0 0 10px rgba(0, 212, 255, 0.1);
+            animation: borderGlow 2s ease-in-out infinite;
+        }
+
+        .roadmap-title { font-weight: 700; color: #e2e8f0; }
+        .roadmap-sub { color: #cbd5e1; font-size: 0.95rem; }
+        .roadmap-meta { color: #93c5fd; font-size: 0.9rem; font-weight: 600; }
+
+        /* ===================================
+           COURSE EXPLORER
+        =================================== */
+        .course-explorer {
+            padding: 4rem 0;
+            background: #f9fafb;
+        }
+
+        .course-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .filter-chip {
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            border: 1px solid #cbd5e1;
+            background: #fff;
+            color: #1f2937;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .filter-chip.active, .filter-chip:hover {
+            background: #1e40af;
+            color: #fff;
+            border-color: #1e40af;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .course-card {
+            background: linear-gradient(150deg, rgba(14, 165, 233, 0.06), rgba(99, 102, 241, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.22);
+            border-radius: 14px;
+            padding: 1.35rem;
+            display: grid;
+            gap: 0.5rem;
+            box-shadow: 0 12px 26px rgba(0,0,0,0.09);
+            transition: all 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            border-color: #ff00ff;
+            box-shadow: 0 0 12px rgba(255, 0, 255, 0.28), 0 0 24px rgba(0, 212, 255, 0.12), 0 14px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #1e40af;
+            background: #e0e7ff;
+        }
+
+        .course-meta { color: #475569; font-size: 0.95rem; }
+
+        /* ===================================
+           TECH STACK
+        =================================== */
+        .tech-stack {
+            padding: 4rem 0;
+            background: #ffffff;
+        }
+
+        .stack-grid {
+            background: linear-gradient(150deg, rgba(14, 165, 233, 0.06), rgba(99, 102, 241, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.22);
+            border-radius: 14px;
+            padding: 1.35rem;
+            text-align: center;
+            box-shadow: 0 12px 26px rgba(0,0,0,0.09);
+            transition: all 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+            transition: all 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+
+        .stack-card:hover {
+            transform: translateY(-6px) scale(1.05);
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.28), 0 0 30px rgba(138, 43, 226, 0.12), 0 15px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .stack-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            margin: 0 auto 0.75rem;
+            display: grid;
+            place-items: center;
+            font-size: 1.25rem;
+            background: #eff6ff;
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        .stack-name { font-weight: 700; color: #1f2937; }
+        .stack-note { color: #64748b; font-size: 0.9rem; }
+
+        /* ===================================
+           CAREER PROOF
+        =================================== */
+        .career-proof {
+            padding: 4rem 0;
+            background: #0f172a;
+            background-image: 
+                linear-gradient(135deg, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(138, 43, 226, 0.03) 0%, transparent 50%);
+            color: #e2e8f0;
+            position: relative;
+        }
+
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .career-card {
+            border: 1px solid rgba(0, 212, 255, 0.28);
+            border-radius: 14px;
+            padding: 1.35rem;
+            background: linear-gradient(145deg, rgba(30, 64, 175, 0.24), rgba(14, 165, 233, 0.18));
+            transition: all 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+        }
+
+        .career-card:hover {
+            transform: translateY(-4px);
+            border-color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.25), 0 0 30px rgba(255, 0, 255, 0.1), inset 0 0 12px rgba(0, 255, 255, 0.03), 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .career-title { font-weight: 700; color: #e2e8f0; margin-bottom: 0.5rem; }
+        .career-meta { color: #93c5fd; font-weight: 700; }
+        .career-list { color: #cbd5e1; font-size: 0.95rem; margin: 0.5rem 0 0; }
+
+        /* ===================================
+           CTA SCHEDULER
+        =================================== */
+        .cta-scheduler {
+            padding: 4rem 0;
+            background: #0b1224;
+        }
+
+        .scheduler-box {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(30, 41, 59, 0.9)),
+                        radial-gradient(120% 120% at 20% 20%, rgba(0, 212, 255, 0.08), transparent 50%),
+                        radial-gradient(120% 120% at 80% 10%, rgba(255, 0, 255, 0.06), transparent 45%);
+            border: 1px solid rgba(0, 212, 255, 0.35);
+            border-radius: 14px;
+            padding: 1.75rem;
+            display: grid;
+            gap: 1.1rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.04);
+            max-width: 760px;
+            margin: 0 auto;
+            backdrop-filter: blur(6px);
+        }
+
+        .scheduler-box::before {
+            content: '';
+            position: absolute;
+            inset: -50% auto auto -50%;
+            width: 120%;
+            height: 120%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.12), transparent);
+            transform: rotate(12deg);
+            animation: shimmer 6s linear infinite;
+            pointer-events: none;
+        }
+
+        .scheduler-box * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .scheduler-head {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .scheduler-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid rgba(34, 211, 238, 0.4);
+            background: rgba(34, 211, 238, 0.08);
+            color: #e0f2fe;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .scheduler-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22d3ee;
+            box-shadow: 0 0 12px rgba(34, 211, 238, 0.8);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .scheduler-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(127, 29, 29, 0.7), rgba(153, 27, 27, 0.6), transparent);
+            opacity: 0.7;
+        }
+
+        .scheduler-calendar p {
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+        }
+
+        .scheduler-calendar strong {
+            color: #e2e8f0;
+        }
+
+        .scheduler-cta-btn {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 0.9rem 1.6rem;
+            border-radius: 999px;
+            background: linear-gradient(120deg, #7f1d1d, #991b1b, #b91c1c);
+            color: #ffffff;
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+        }
+
+        .scheduler-cta-btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            filter: brightness(1.15);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3), 0 0 18px rgba(127, 29, 29, 0.5);
+        }
+
+        .scheduler-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .scheduler-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.12);
+            border: 1px solid rgba(148, 163, 184, 0.35);
+            color: #cbd5e1;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .scheduler-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .scheduler-field {
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            padding: 0.85rem 1rem;
+            font-size: 1rem;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        .learning-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .learning-features ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .learning-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            color: #4b5563;
+        }
+
+        .learning-features li::before {
+            content: "âœ“";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #10b981;
+            color: #ffffff;
+            border-radius: 50%;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .learning-quote {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-style: italic;
+            color: #1e40af;
+            font-weight: 600;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        /* ===================================
+           TESTIMONIALS SECTION (HORIZONTAL AUTO-SCROLL)
+        =================================== */
+        .testimonials {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+            overflow: hidden;
+        }
+
+        .testimonials-container {
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .testimonials-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonials-wrapper::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
+
+        .testimonials-track {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .testimonial-card {
+            flex: 0 0 300px;
+            background: linear-gradient(150deg, rgba(14, 165, 233, 0.06), rgba(99, 102, 241, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.22);
+            border-radius: 14px;
+            padding: 2rem;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.75rem;
+            margin: 0 auto;
+        }
+
+        .testimonial-name {
+            font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+            font-weight: 600;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        .testimonial-course {
+            font-size: clamp(0.875rem, 2vw, 0.9375rem);
+            color: #1e40af;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+            color: #6b7280;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .testimonial-arrows {
+            display: none;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .arrow-btn {
+            width: 48px;
+            height: 48px;
+            background-color: #1e40af;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .arrow-btn:hover {
+            background-color: #1e3a8a;
+        }
+
+        /* ===================================
+           VIDEO SECTION
+        =================================== */
+        .video-section {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .video-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #f3f4f6;
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-placeholder::after {
+            content: "YouTube Video Embed";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #6366f1;
+            font-weight: 600;
+            font-size: clamp(0.875rem, 2vw, 1rem);
+        }
+
+        /* Responsive iframe for actual YouTube embeds */
+        .video-item iframe {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+        }
+
+        /* ===================================
+           PROGRAM OUTCOMES SECTION
+        =================================== */
+        .outcomes {
+            padding: 4rem 0;
+            background-color: #f9fafb;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .outcome-item {
+            background: linear-gradient(150deg, rgba(14, 165, 233, 0.06), rgba(99, 102, 241, 0.05));
+            padding: 2rem;
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
+            border: 1px solid rgba(255, 0, 255, 0.16);
+        }
+
+        .outcome-item:hover {
+            transform: translateY(-6px);
+            border-color: #ff00ff;
+            box-shadow: 0 0 12px rgba(255, 0, 255, 0.28), 0 0 24px rgba(0, 212, 255, 0.1), 0 14px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .outcome-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .outcome-item h3 {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .outcome-item p {
+            font-size: clamp(0.9375rem, 2vw, 1.0625rem);
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .roles-list {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .roles-list h3 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            text-align: center;
+        }
+
+        .roles-list ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .roles-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: clamp(1rem, 2.5vw, 1.125rem);
+            color: #4b5563;
+            padding: 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .roles-list li::before {
+            content: "â†’";
+            color: #1e40af;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        /* ===================================
+           FINAL CTA SECTION
+        =================================== */
+        .final-cta {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.95), rgba(30, 58, 138, 0.95)),
+                        url('imgs/home/industry-learn.jpg') center/cover no-repeat;
+            background-color: #1e40af;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .final-cta p {
+            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        /* ===================================
+           FOOTER SECTION
+        =================================== */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 3rem 1rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer > div {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 0;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            height: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+        }
+
+        .footer-section a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - TABLET
+        =================================== */
+        @media (min-width: 480px) {
+            .hero-cta {
+                flex-direction: row;
+            }
+
+            .testimonials-track {
+                gap: 2rem;
+            }
+
+            .testimonial-card {
+                flex: 0 0 340px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 2rem;
+            }
+
+            .container-wide {
+                padding: 0 2rem;
+            }
+
+            .nav-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 0;
+            }
+
+            .schools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .learning-content {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .learning-image {
+                flex: 0 0 45%;
+            }
+
+            .learning-features {
+                flex: 1;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .outcomes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .roles-list ul {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .testimonial-arrows {
+                display: flex;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - DESKTOP
+        =================================== */
+        @media (min-width: 1024px) {
+            .schools-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .video-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .outcomes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN - LARGE SCREENS
+        =================================== */
+        @media (min-width: 1440px) {
+            .container {
+                padding: 0 3rem;
+            }
+
+            .container-wide {
+                padding: 0 3rem;
+            }
+
+            .hero {
+                padding: 8rem 0;
+            }
+
+            .section-title {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        /* ===================================
+           ACCESSIBILITY & TOUCH IMPROVEMENTS
+        =================================== */
+        @media (hover: none) and (pointer: coarse) {
+            .btn {
+                min-height: 48px;
+            }
+
+            .arrow-btn {
+                width: 56px;
+                height: 56px;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        a:focus,
+        button:focus {
+            outline: 3px solid #60a5fa;
+            outline-offset: 2px;
+        }
+        /* ===================================
+           CURSOR GLOW EFFECT
+        =================================== */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                var(--glow-core, rgba(56, 189, 248, 0.55)) 0%,
+                var(--glow-mid, rgba(59, 130, 246, 0.3)) 35%,
+                var(--glow-edge, rgba(59, 130, 246, 0)) 70%
+            );
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            mix-blend-mode: normal;
+            transform: translate3d(-9999px, -9999px, 0);
+            will-change: transform, opacity, background;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .cursor-glow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="imgs/home/LSA-Logo.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="school-of-programming.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="career-guidance.html">Career Guidance</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BLOG HERO SECTION -->
+    <section class="blog-hero">
+        <div class="hero-container">
+            <span class="blog-category">Career Guidance</span>
+            <h1>How to Choose the Right Programming Career</h1>
+            <p style="font-size: 1.125rem; color: var(--text-gray); margin-top: var(--space-md);">
+                A comprehensive guide to exploring programming career paths, understanding different specializations, and building the skills you need to succeed in the tech industry.
+            </p>
+            <div class="blog-meta">
+                <span>ðŸ“… Published on January 15, 2026</span>
+                <span>â±ï¸ 8 min read</span>
+                <span>ðŸ‘¤ LSA Academic Team</span>
+            </div>
+            <div class="hero-image">
+                <img src="imgs/home/project.jpg" alt="Diverse professionals in a modern tech workspace collaborating on programming projects" width="600" height="338">
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN ARTICLE CONTENT -->
+    <main id="main-content">
+        <div class="content-box">
+            <article>
+            <!-- Introduction -->
+            <div class="article-intro">
+                <p>
+                    <strong>Programming is one of today's most rewarding and in-demand careers.</strong> But with dozens of specializations, frameworks, and career paths available, choosing the right direction can feel overwhelming. This guide breaks down the major programming careers, the skills you'll need, and practical steps to help you find your perfect fit in tech.
+                </p>
+            </div>
+
+            <!-- Section 1: Why Choose Programming? -->
+            <section>
+                <h2>Why Programming is a Smart Career Choice</h2>
+                <p>
+                    The demand for skilled programmers continues to grow faster than supply. According to industry reports, tech professionals earn competitive salaries, enjoy flexible work arrangements, and have opportunities for continuous learning and growth.
+                </p>
+                <p>
+                    Beyond the financial benefits, programming offers:
+                </p>
+                <ul>
+                    <li><strong>Problem-solving impact:</strong> Build solutions that help millions of people worldwide</li>
+                    <li><strong>Creative expression:</strong> Blend logic with creativity to design user experiences</li>
+                    <li><strong>Job security:</strong> Tech skills are always in demand across industries</li>
+                    <li><strong>Remote work opportunities:</strong> Many companies offer flexible or fully remote positions</li>
+                    <li><strong>Entrepreneurship potential:</strong> Start your own tech business or freelance</li>
+                </ul>
+
+                <div class="article-image">
+                    <img src="imgs/home/industry-learn.jpg" alt="Graph showing the rising demand for programming professionals over the past decade" width="600" height="300">
+                    <p class="image-caption">Programming job market continues to grow faster than other tech fields</p>
+                </div>
+            </section>
+
+            <!-- Section 2: Understanding Major Programming Paths -->
+            <section>
+                <h2>Major Programming Career Paths Explained</h2>
+                <p>
+                    Programming careers typically divide into several specializations. Each path has unique skills, tools, and daily responsibilities. Let's explore the most popular options:
+                </p>
+
+                <!-- Web Development -->
+                <h3>1. Web Development</h3>
+                <p>
+                    Web developers build websites and web applications that run in browsers. This field splits into two main roles:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Frontend Developer:</strong> Focuses on the user interfaceâ€”everything users see and interact with. Learn HTML, CSS, JavaScript, and frameworks like React or Vue.js.
+                    </li>
+                    <li>
+                        <strong>Backend Developer:</strong> Builds the server-side logic and databases. Languages include Python, Java, Node.js, and PHP.
+                    </li>
+                    <li>
+                        <strong>Full-Stack Developer:</strong> Comfortable with both frontend and backend work.
+                    </li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Creative problem-solvers who enjoy building user-facing applications and seeing their work live on the internet.
+                </div>
+
+                <!-- Mobile Development -->
+                <h3>2. Mobile App Development</h3>
+                <p>
+                    Mobile developers create applications for smartphones and tablets. Two main approaches exist:
+                </p>
+                <ul>
+                    <li><strong>Native Development:</strong> Swift/Objective-C for iOS, Kotlin/Java for Android</li>
+                    <li><strong>Cross-Platform:</strong> React Native, Flutter, or Xamarin to build for multiple platforms with shared code</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Developers passionate about mobile technology and creating apps that reach millions of users directly on their phones.
+                </div>
+
+                <!-- Data Science & Machine Learning -->
+                <h3>3. Data Science & Machine Learning</h3>
+                <p>
+                    Data professionals extract insights from data and build intelligent systems. This path includes:
+                </p>
+                <ul>
+                    <li><strong>Data Scientist:</strong> Analyze data, build predictive models, and communicate findings</li>
+                    <li><strong>Machine Learning Engineer:</strong> Design and deploy AI/ML systems at scale</li>
+                    <li><strong>Data Analyst:</strong> Focus on data visualization and business insights</li>
+                </ul>
+                <p>
+                    Primary languages: Python, R, and SQL. Strong math and statistics background is valuable.
+                </p>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Logical thinkers who enjoy working with data, statistics, and building intelligent systems.
+                </div>
+
+                <!-- Backend & Systems -->
+                <h3>4. Backend & Systems Programming</h3>
+                <p>
+                    Systems programmers work on infrastructure, databases, cloud services, and large-scale applications. This includes:
+                </p>
+                <ul>
+                    <li><strong>DevOps Engineer:</strong> Manage deployment, testing, and infrastructure</li>
+                    <li><strong>Database Administrator/Engineer:</strong> Design and maintain databases</li>
+                    <li><strong>System Architect:</strong> Design large, scalable systems</li>
+                </ul>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Developers interested in the "big picture" and building systems that handle millions of users.
+                </div>
+
+                <!-- Embedded & IoT -->
+                <h3>5. Embedded Systems & IoT</h3>
+                <p>
+                    Embedded engineers develop software for physical devices: cars, industrial machines, smart home devices, and more.
+                </p>
+                <p>
+                    Languages: C, C++, and assembly. Requires understanding of hardware and real-time systems.
+                </p>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Hands-on programmers who enjoy working with hardware and the physical world.
+                </div>
+
+                <!-- Game Development -->
+                <h3>6. Game Development</h3>
+                <p>
+                    Game developers create games for consoles, PC, and mobile. Popular engines include Unity (C#) and Unreal Engine (C++).
+                </p>
+                <div class="highlight-box">
+                    <strong>Best for:</strong> Creative developers with passion for games and interactive experiences.
+                </div>
+            </section>
+
+            <!-- Section 3: Essential Skills by Path -->
+            <section>
+                <h2>Essential Skills for Different Programming Paths</h2>
+                <p>
+                    While specific languages and tools vary by path, all programmers need foundational skills:
+                </p>
+
+                <h3>Universal Programming Skills</h3>
+                <ul>
+                    <li><strong>Problem-solving:</strong> Break complex problems into manageable steps</li>
+                    <li><strong>Code fundamentals:</strong> Variables, loops, conditionals, functions, data structures</li>
+                    <li><strong>Debugging:</strong> Find and fix errors efficiently</li>
+                    <li><strong>Version control (Git):</strong> Collaborate with other developers</li>
+                    <li><strong>Code readability:</strong> Write clear, maintainable code</li>
+                    <li><strong>Learning mindset:</strong> Tech evolves constantly; stay curious and adaptable</li>
+                </ul>
+
+                <h3>Soft Skills (Often Underestimated)</h3>
+                <ul>
+                    <li><strong>Communication:</strong> Explain technical concepts clearly</li>
+                    <li><strong>Teamwork:</strong> Collaborate with designers, managers, and other developers</li>
+                    <li><strong>Time management:</strong> Meet deadlines and manage multiple tasks</li>
+                    <li><strong>Attention to detail:</strong> Small bugs can cause big problems</li>
+                </ul>
+
+                <div class="article-image">
+                    <img src="imgs/home/code.jpg" alt="Visualization of essential programming skills including communication, problem-solving, and technical expertise" width="600" height="300">
+                    <p class="image-caption">Programming success combines technical skills with soft skills and continuous learning</p>
+                </div>
+            </section>
+
+            <!-- Section 4: Common Mistakes to Avoid -->
+            <section>
+                <h2>Common Mistakes Students Make (And How to Avoid Them)</h2>
+
+                <h3>âŒ Mistake 1: Learning Too Many Languages at Once</h3>
+                <p>
+                    <strong>The trap:</strong> Students often jump between Python, JavaScript, Java, and C++ simultaneously, learning none deeply.
+                </p>
+                <p>
+                    <strong>Better approach:</strong> Master one language thoroughly first. Programming concepts are universalâ€”once you understand loops and functions in one language, learning another is much faster.
+                </p>
+
+                <h3>âŒ Mistake 2: Only Watching Tutorials Without Building</h3>
+                <p>
+                    <strong>The trap:</strong> Watching tutorials feels productive but doesn't build real skills. Your hands never touch the keyboard.
+                </p>
+                <p>
+                    <strong>Better approach:</strong> Code along with tutorials. Then immediately try to build something yourselfâ€”a calculator, a to-do app, a weather website. <a href="career-guidance.html">Our Career Guidance page</a> includes project ideas for each level.
+                </p>
+
+                <h3>âŒ Mistake 3: Ignoring the Fundamentals</h3>
+                <p>
+                    <strong>The trap:</strong> Jumping straight to frameworks (React, Django, etc.) without understanding core programming concepts.
+                </p>
+                <p>
+                    <strong>Better approach:</strong> Invest time in fundamentals: algorithms, data structures, and how the web works. This foundation makes advanced topics much clearer.
+                </p>
+
+                <h3>âŒ Mistake 4: Not Practicing Problem-Solving</h3>
+                <p>
+                    <strong>The trap:</strong> Learning syntax without solving real problems.
+                </p>
+                <p>
+                    <strong>Better approach:</strong> Use platforms like LeetCode or HackerRank to solve progressively harder problems. This builds the problem-solving muscle programmers need.
+                </p>
+
+                <h3>âŒ Mistake 5: Giving Up Too Early</h3>
+                <p>
+                    <strong>The trap:</strong> Programming is challenging. Hitting a wall and quitting.
+                </p>
+                <p>
+                    <strong>Better approach:</strong> Struggles are normal. Errors teach you more than success. When stuck, debug step-by-step, search for solutions, and ask for help. Every programmer faces this.
+                </p>
+            </section>
+
+            <!-- Section 5: Practical Steps to Choose Your Path -->
+            <section>
+                <h2>How to Choose Your Programming Path: Step-by-Step</h2>
+
+                <h3>Step 1: Assess Your Interests</h3>
+                <p>
+                    Do you enjoy building visible user interfaces? Or do you prefer backend logic? Do you like working with data? Hardware? Games? Your natural interests should guide your choice.
+                </p>
+                <p>
+                    <strong>Action:</strong> Spend 2â€“3 hours exploring each specialty with beginner tutorials. Your gut feeling matters.
+                </p>
+
+                <h3>Step 2: Research Job Market & Salary</h3>
+                <p>
+                    Visit job boards like LinkedIn, Indeed, or Glassdoor. Search for roles in each path you're considering. Check salary ranges, required skills, and job availability in your region.
+                </p>
+                <p>
+                    <strong>Real talk:</strong> While passion matters, you also need to earn. Choose a path with reasonable job prospects.
+                </p>
+
+                <h3>Step 3: Learn the Fundamentals First</h3>
+                <p>
+                    Start with a beginner-friendly language like Python or JavaScript. Understand variables, loops, functions, and basic data structures. This foundation applies to all specializations.
+                </p>
+                <p>
+                    <strong>Recommended timeframe:</strong> 2â€“3 months of consistent practice (20â€“30 hours per week).
+                </p>
+
+                <h3>Step 4: Build a Simple Project</h3>
+                <p>
+                    Apply your fundamentals to a real project:
+                </p>
+                <ul>
+                    <li>Web dev? Build a personal portfolio website</li>
+                    <li>Mobile? Create a simple app</li>
+                    <li>Data science? Analyze a public dataset</li>
+                </ul>
+                <p>
+                    Real projects are infinitely more valuable than completed tutorials on your resume and in your portfolio.
+                </p>
+
+                <h3>Step 5: Specialize & Deepen Skills</h3>
+                <p>
+                    Once you've chosen your path, take a structured course in that specialization. <a href="school-of-programming.html">Explore our programming courses</a> to find options that match your chosen path.
+                </p>
+
+                <h3>Step 6: Keep Learning & Adapt</h3>
+                <p>
+                    Tech changes fast. Follow industry blogs, join programming communities, and stay curious. Your first specialization might not be your lastâ€”and that's okay.
+                </p>
+
+                <div class="article-image">
+                    <img src="imgs/home/learn-by-doing.png" alt="A roadmap showing the progression from fundamentals to specialization to advanced skills in programming" width="600" height="300">
+                    <p class="image-caption">A typical progression from beginner to professional programmer</p>
+                </div>
+            </section>
+
+            <!-- Section 6: Resources & Next Steps -->
+            <section>
+                <h2>Resources to Get Started Today</h2>
+
+                <h3>Free Online Resources</h3>
+                <ul>
+                    <li><strong>Codecademy, FreeCodeCamp, Khan Academy:</strong> Interactive coding tutorials</li>
+                    <li><strong>GitHub:</strong> See real code from professionals and contribute to open-source</li>
+                    <li><strong>Stack Overflow:</strong> Ask questions and learn from experienced programmers</li>
+                    <li><strong>YouTube:</strong> Thousands of free programming tutorials</li>
+                </ul>
+
+                <h3>Choose a Structured Learning Path</h3>
+                <p>
+                    <a href="school-of-programming.html">Lords Skill Academy's Programming Courses</a> provide structured, beginner-friendly paths with mentorship and career support.
+                </p>
+
+                <h3>Consider Professional Guidance</h3>
+                <p>
+                    Still unsure? Our <a href="career-guidance.html">Career Guidance service</a> includes personalized assessment to help you choose the right path based on your interests, strengths, and market opportunities.
+                </p>
+            </section>
+            </article>
+        </div>
+
+        <!-- KEY TAKEAWAYS SECTION -->
+        <section class="key-takeaways">
+            <h2>Key Takeaways</h2>
+            <ul class="takeaway-list">
+                <li><strong>Multiple paths exist</strong> â€“ Web, mobile, data science, embedded, game development, and more. Your interests should guide your choice.</li>
+                <li><strong>Master fundamentals first</strong> â€“ Learn one language deeply. Build a strong foundation in algorithms and data structures.</li>
+                <li><strong>Learn by building</strong> â€“ Tutorials alone aren't enough. Create real projects to solidify your skills.</li>
+                <li><strong>Soft skills matter</strong> â€“ Communication, teamwork, and continuous learning are as important as technical skills.</li>
+                <li><strong>The journey is personal</strong> â€“ Your first choice doesn't have to be forever. Many programmers specialize in different areas throughout their careers.</li>
+            </ul>
+        </section>
+
+        <!-- RELATED POSTS SECTION -->
+        <section class="related-posts">
+            <h2>Related Articles</h2>
+            <div class="posts-grid">
+                <!-- Related Post 1 -->
+                <article class="post-card">
+                    <div class="post-card-image">
+                        <img src="imgs/home/code.jpg" alt="A beginner-friendly workspace with HTML, CSS, and JavaScript code" width="300" height="150">
+                    </div>
+                    <div class="post-card-content">
+                        <h3>Getting Started with Web Development: A Beginner's Roadmap</h3>
+                        <p class="post-card-excerpt">
+                            Learn the essential technologies for web development, understand the differences between frontend and backend, and start building your first website today.
+                        </p>
+                        <a href="blog-getting-started-web-development.html" class="read-more">Read More â†’</a>
+                    </div>
+                </article>
+
+                <!-- Related Post 2 -->
+                <article class="post-card">
+                    <div class="post-card-image">
+                        <img src="imgs/home/project.jpg" alt="Python code examples on a developer's screen" width="300" height="150">
+                    </div>
+                    <div class="post-card-content">
+                        <h3>Why Python is Perfect for Beginners (And Still Powerful for Experts)</h3>
+                        <p class="post-card-excerpt">
+                            Discover why Python is the most recommended first language for new programmers, and how it remains relevant across web development, data science, and AI.
+                        </p>
+                        <a href="blog-python-beginners.html" class="read-more">Read More â†’</a>
+                    </div>
+                </article>
+
+                <!-- Related Post 3 -->
+                <article class="post-card">
+                    <div class="post-card-image">
+                        <img src="imgs/home/person.jpg" alt="A professional in an office environment working on code" width="300" height="150">
+                    </div>
+                    <div class="post-card-content">
+                        <h3>Landing Your First Programming Job: Practical Steps to Success</h3>
+                        <p class="post-card-excerpt">
+                            Build a portfolio, prepare for technical interviews, and navigate the job search process with confidence. Learn what employers really look for.
+                        </p>
+                        <a href="blog-first-tech-job.html" class="read-more">Read More â†’</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- BLOG CTA SECTION -->
+        <section class="blog-cta">
+            <h2>Ready to Start Your Programming Journey?</h2>
+            <p>
+                Choosing the right career path is an important decision. Whether you're ready to dive in or need guidance first, we're here to help.
+            </p>
+            <div class="cta-buttons">
+                <a href="career-guidance.html" class="btn btn-primary">Get Career Guidance</a>
+                <a href="school-of-programming.html" class="btn btn-secondary">Explore Our Courses</a>
+            </div>
+        </section>
+
+        <!-- AUTHOR SECTION -->
+        <section class="author-section">
+            <div class="author-image">
+                <img src="imgs/home/person.jpg" alt="Lords Skill Academy Academic & Career Guidance Team" width="60" height="60">
+            </div>
+            <div class="author-content">
+                <h3>Written by the LSA Academic & Career Guidance Team</h3>
+                <p>
+                    The Lords Skill Academy team combines years of industry experience with a deep commitment to student success. We write articles based on real market trends, learner feedback, and our hands-on experience training thousands of programming students.
+                </p>
+            </div>
+        </section>
+
+        <!-- COMMENTS SECTION (PLACEHOLDER) -->
+        <section class="comments-section">
+            <h2>Have Questions or Thoughts?</h2>
+            <p class="comment-placeholder">
+                ðŸ’¬ Comments section coming soon! We're building a community discussion space. For now, reach out to us at <a href="contact-us.html">our contact page</a> with feedback or questions.
+            </p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 var(--space-md);">
+            <div class="footer-logo">
+                <img src="imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="school-of-programming.html">Programming</a></li>
+                        <li><a href="ds.html">Data Science</a></li>
+                        <li><a href="career-guidance.html">Career Guidance</a></li>
+                        <li><a href="trainers.html">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community-events.html">Community Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Location & Contact</h3>
+                    <ul>
+                        <li>ðŸ“ Serving students worldwide, with roots in India</li>
+                        <li><a href="contact-us.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Â© 2026 Lords Skill Academy. All rights reserved. | <strong>Affiliated with:</strong> Lords Institute of Engineering & Technology (LIET)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // ==========================================
+        // SMOOTH SCROLLING
+        // ==========================================
+        // Native browser smooth scroll is already enabled via CSS
+        // This prevents default on anchor clicks for better browser support
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ==========================================
+        // LAZY LOADING FOR IMAGES
+        // ==========================================
+        // Modern browsers support native lazy loading
+        // This is a fallback for older browsers
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
+        }
+
+        // ==========================================
+        // READING TIME CALCULATION (OPTIONAL)
+        // ==========================================
+        // Calculate and display estimated reading time
+        function calculateReadingTime() {
+            const article = document.querySelector('article');
+            if (!article) return;
+
+            const text = article.innerText;
+            const wordsPerMinute = 200;
+            const wordCount = text.split(/\s+/).length;
+            const readingTime = Math.ceil(wordCount / wordsPerMinute);
+
+            const metaElement = document.querySelector('.blog-meta');
+            // Reading time is already in HTML, but you could update it here dynamically
+        }
+
+        // ==========================================
+        // KEYBOARD ACCESSIBILITY
+        // ==========================================
+        // Ensure all interactive elements are keyboard accessible
+        document.querySelectorAll('a, button').forEach(element => {
+            element.setAttribute('tabindex', '0');
+        });
+
+        // ==========================================
+        // SCROLL SPY (OPTIONAL)
+        // ==========================================
+        // Highlight which section user is reading
+        function initScrollSpy() {
+            const sections = document.querySelectorAll('article section, .key-takeaways, .related-posts');
+            
+            const observerOptions = {
+                threshold: 0.3,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Could update a table of contents or navigation here
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => sectionObserver.observe(section));
+        }
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            calculateReadingTime();
+            initScrollSpy();
+        });
+
+        // ==========================================
+        // ANALYTICS TRACKING (PLACEHOLDER)
+        // ==========================================
+        // Track page views and reading engagement
+        // This is a placeholder for future analytics integration
+        window.addEventListener('load', () => {
+            // Track page view
+            console.log('Blog post loaded:', document.title);
+            
+            // Track scroll depth
+            let maxScroll = 0;
+            window.addEventListener('scroll', () => {
+                const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                }
+            });
+
+            // Track time on page
+            const startTime = Date.now();
+            window.addEventListener('beforeunload', () => {
+                const timeOnPage = (Date.now() - startTime) / 1000;
+                console.log('Time on page:', timeOnPage, 'seconds');
+            });
+        });
+    </script>
+    <script>
+        (function() {
+            const glow = document.querySelector('.cursor-glow');
+            if (!glow) return;
+
+            let currentX = window.innerWidth / 2;
+            let currentY = window.innerHeight / 2;
+            let targetX = currentX;
+            let targetY = currentY;
+            let size = 24;
+            let t = 0;
+
+            function updateSize() {
+                size = glow.offsetWidth / 2 || 24;
+            }
+
+            updateSize();
+            window.addEventListener('resize', updateSize);
+
+            function animate() {
+                t += 0.04;
+                const wobbleX = Math.sin(t) * 4;
+                const wobbleY = Math.cos(t * 0.9) * 4;
+
+                currentX += (targetX - currentX) * 0.14;
+                currentY += (targetY - currentY) * 0.14;
+                glow.style.transform = `translate3d(${currentX - size + wobbleX}px, ${currentY - size + wobbleY}px, 0)`;
+                requestAnimationFrame(animate);
+            }
+
+            function parseRgb(color) {
+                const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+                if (!match) return null;
+                return {
+                    r: parseInt(match[1], 10),
+                    g: parseInt(match[2], 10),
+                    b: parseInt(match[3], 10),
+                    a: match[4] !== undefined ? parseFloat(match[4]) : 1
+                };
+            }
+
+            function getEffectiveBgColor(el) {
+                let node = el;
+                while (node && node !== document.documentElement) {
+                    const bg = window.getComputedStyle(node).backgroundColor;
+                    const rgb = parseRgb(bg);
+                    if (rgb && rgb.a > 0) {
+                        return rgb;
+                    }
+                    node = node.parentElement;
+                }
+                return { r: 255, g: 255, b: 255, a: 1 };
+            }
+
+            function updateGlowColor(x, y) {
+                const el = document.elementFromPoint(x, y);
+                if (!el) return;
+
+                const bg = getEffectiveBgColor(el);
+                const luminance = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
+
+                if (luminance > 0.55) {
+                    glow.style.setProperty('--glow-core', 'rgba(37, 99, 235, 0.55)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.32)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 18px rgba(37, 99, 235, 0.35)';
+                } else {
+                    glow.style.setProperty('--glow-core', 'rgba(56, 189, 248, 0.6)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.35)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.32)';
+                }
+            }
+
+            window.addEventListener('mousemove', (event) => {
+                targetX = event.clientX;
+                targetY = event.clientY;
+                glow.style.opacity = '1';
+                updateGlowColor(event.clientX, event.clientY);
+            });
+
+            window.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+
+            animate();
+        })();
+    </script>
+</body>
+</html>
