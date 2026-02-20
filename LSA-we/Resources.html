@@ -1,0 +1,1979 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog and resources from Lords Skill Academy. Read career insights, skill guides, programming tutorials, and industry knowledge to help you succeed.">
+    <meta name="keywords" content="blog, career guidance, programming, data science, cyber security, skill development, industry trends, tutorials, guides">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lordsskillacademy.com/blog.html">
+    <title>Blog & Resources | Lords Skill Academy - Career Insights & Skill Guides</title>
+    
+    <style>
+        /* ===================================
+           CSS VARIABLES - DESIGN SYSTEM
+        =================================== */
+        :root {
+            /* Colors */
+            --color-primary: #1e40af;
+            --color-primary-dark: #1e3a8a;
+            --color-primary-light: #3b82f6;
+            --color-text-primary: #0f172a;
+            --color-text-secondary: #4b5563;
+            --color-text-tertiary: #6b7280;
+            --color-bg-primary: #ffffff;
+            --color-bg-secondary: #f8fafc;
+            --color-bg-accent: #eff6ff;
+            --color-border: #e2e8f0;
+            --color-success: #10b981;
+
+            /* Typography */
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+            --font-size-sm: clamp(0.875rem, 1.75vw, 1rem);
+            --font-size-base: clamp(1rem, 2vw, 1.125rem);
+            --font-size-lg: clamp(1.125rem, 2.5vw, 1.375rem);
+            --font-size-xl: clamp(1.375rem, 3vw, 1.75rem);
+            --font-size-2xl: clamp(1.75rem, 4vw, 2.25rem);
+            --font-size-3xl: clamp(2.25rem, 5vw, 3rem);
+            --font-size-4xl: clamp(2.5rem, 6vw, 3.5rem);
+
+            /* Line Heights */
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --line-height-relaxed: 1.7;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 5rem;
+
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+            --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+
+            /* Max Width */
+            --container-max: 1200px;
+            --container-padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            :root {
+                --container-padding: 2rem;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            :root {
+                --container-padding: 3rem;
+            }
+        }
+
+        /* ===================================
+           RESET & BASE STYLES
+        =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-normal);
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-primary);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        /* ===================================
+           UTILITY CLASSES
+        =================================== */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-normal);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-dark);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .btn-white:hover {
+            background-color: var(--color-bg-secondary);
+        }
+
+        /* ===================================
+           HEADER STYLES
+        =================================== */
+        .header {
+            background-color: var(--color-bg-primary);
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: clamp(120px, 20vw, 160px);
+            height: auto;
+            background-color: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+
+        /* Hamburger Menu Button */
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            color: var(--color-text-primary);
+            transition: color var(--transition-normal);
+        }
+
+        .nav-menu a:hover {
+            color: var(--color-primary);
+        }
+
+        .nav-menu.active {
+            display: flex;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            padding: var(--spacing-lg);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.1);
+            z-index: 1000;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        .nav-menu.active ul {
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===================================
+           PAGE HERO SECTION
+        =================================== */
+        .page-hero {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .page-hero-description {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.95;
+            max-width: 600px;
+            color: #ffffff;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: var(--spacing-sm);
+            font-size: var(--font-size-sm);
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: #ffffff;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ===================================
+           CONTENT SECTION
+        =================================== */
+        section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        section.alt-bg {
+            background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(15, 23, 42, 0.02) 100%);
+        }
+
+        h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-lg);
+            margin-top: var(--spacing-2xl);
+            position: relative;
+            padding-left: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 28px;
+            background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 3px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: var(--spacing-lg);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 2px;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ===================================
+           BLOG INTRO
+        =================================== */
+        .blog-intro {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .blog-intro p {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===================================
+           CATEGORY FILTERS
+        =================================== */
+        .category-filters {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-2xl);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--color-border);
+            background: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            cursor: pointer;
+            transition: all var(--transition-normal);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .filter-btn.active {
+            background: var(--color-primary);
+            color: #ffffff;
+            border-color: var(--color-primary);
+        }
+
+        /* ===================================
+           BLOG GRID & CARDS
+        =================================== */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        @media (min-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .blog-card {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: all var(--transition-normal);
+        }
+
+        .blog-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .blog-card.hidden {
+            display: none;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-bg-accent) 0%, #dbeafe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: var(--color-primary);
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            flex: 1;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            font-size: var(--font-size-sm);
+            flex-wrap: wrap;
+        }
+
+        .blog-category {
+            display: inline-block;
+            background: var(--color-bg-accent);
+            color: var(--color-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: var(--font-size-xs);
+        }
+
+        .blog-date {
+            color: var(--color-text-tertiary);
+            font-size: var(--font-size-xs);
+        }
+
+        .blog-title {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin: 0;
+            line-height: var(--line-height-tight);
+        }
+
+        .blog-excerpt {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-relaxed);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: auto;
+        }
+
+        .blog-cta {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            margin-top: var(--spacing-md);
+        }
+
+        .blog-cta:hover {
+            text-decoration: underline;
+        }
+
+        /* ===================================
+           FEATURED RESOURCES SECTION
+        =================================== */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        @media (min-width: 768px) {
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .featured-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, var(--color-bg-accent) 0%, rgba(15, 23, 42, 0.05) 100%);
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .featured-icon {
+            font-size: 60px;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .featured-card h3 {
+            margin-top: 0;
+            color: var(--color-primary);
+        }
+
+        .featured-card p {
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* ===================================
+           RESOURCES SECTION
+        =================================== */
+        .resource-item {
+            background: var(--color-bg-secondary);
+            border-left: 4px solid var(--color-primary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .resource-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .resource-item p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .resource-item .btn {
+            font-size: var(--font-size-sm);
+            padding: 0.5rem 1rem;
+        }
+
+        /* ===================================
+           CTA SECTION
+        =================================== */
+        .cta-dual {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        @media (min-width: 768px) {
+            .cta-dual {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, var(--color-bg-accent) 0%, rgba(15, 23, 42, 0.05) 100%);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-top: 0;
+            color: var(--color-primary);
+        }
+
+        .cta-box p {
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* ===================================
+           SEO CONTENT BLOCK
+        =================================== */
+        .seo-block {
+            background: var(--color-bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .seo-block p {
+            font-size: var(--font-size-sm);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ===================================
+           FINAL CTA SECTION
+        =================================== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            color: #ffffff;
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        .final-cta h2::before {
+            display: none;
+        }
+
+        .final-cta h2::after {
+            display: none;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===================================
+           FOOTER STYLES
+        =================================== */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 3rem 1rem 1rem;
+            margin-top: 4rem;
+        }
+
+        footer > div {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 0;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            height: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+        }
+
+        .footer-section a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN
+        =================================== */
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex !important;
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                flex-direction: row;
+                background: transparent !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                animation: none !important;
+            }
+
+            .nav-menu ul {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .hamburger-menu {
+                display: none !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            h2 {
+                padding-bottom: var(--spacing-lg);
+            }
+
+            h2::after {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: var(--spacing-2xl) 0;
+            }
+
+            h2 {
+                margin-top: var(--spacing-xl);
+                padding-bottom: var(--spacing-md);
+            }
+
+            h2::after {
+                width: 50px;
+            }
+
+            .page-hero h1 {
+                margin-bottom: var(--spacing-md);
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: var(--spacing-xl) 0;
+            }
+
+            .page-hero {
+                padding: var(--spacing-2xl) 0;
+            }
+
+            .page-hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            h2 {
+                margin-top: var(--spacing-lg);
+                font-size: var(--font-size-xl);
+            }
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: var(--font-size-sm);
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: var(--font-size-xs);
+            }
+        }
+
+        /* ===================================
+           ACCESSIBILITY
+        =================================== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* ===================================
+           STATS & COUNTERS
+        =================================== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            font-size: var(--font-size-base);
+            opacity: 0.95;
+        }
+
+        /* ===================================
+           EXPERT CONTRIBUTORS SECTION
+        =================================== */
+        .expert-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        @media (min-width: 768px) {
+            .expert-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .expert-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .expert-card {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .expert-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .expert-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin: 0 auto var(--spacing-md);
+        }
+
+        .expert-name {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .expert-title {
+            font-size: var(--font-size-sm);
+            color: var(--color-primary);
+            font-weight: 500;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .expert-bio {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .expert-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-xs);
+            justify-content: center;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: var(--color-bg-accent);
+            color: var(--color-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+        }
+
+        /* ===================================
+           TESTIMONIALS SECTION
+        =================================== */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .testimonial-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background: var(--color-bg-primary);
+            border-left: 4px solid var(--color-primary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .testimonial-stars {
+            color: #fbbf24;
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            font-style: italic;
+            margin-bottom: var(--spacing-md);
+            line-height: var(--line-height-relaxed);
+        }
+
+        .testimonial-author {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .testimonial-role {
+            font-size: var(--font-size-xs);
+            color: var(--color-text-tertiary);
+        }
+
+        /* ===================================
+           TECH SKILLS SHOWCASE
+        =================================== */
+        .tech-showcase {
+            background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(15, 23, 42, 0.05) 100%);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .tech-item {
+            background: var(--color-bg-primary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--color-border);
+            transition: all var(--transition-normal);
+        }
+
+        .tech-item:hover {
+            border-color: var(--color-primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .tech-name {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+        /* ===================================
+           CURSOR GLOW EFFECT
+        =================================== */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                var(--glow-core, rgba(56, 189, 248, 0.55)) 0%,
+                var(--glow-mid, rgba(59, 130, 246, 0.3)) 35%,
+                var(--glow-edge, rgba(59, 130, 246, 0)) 70%
+            );
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            mix-blend-mode: normal;
+            transform: translate3d(-9999px, -9999px, 0);
+            will-change: transform, opacity, background;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .cursor-glow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <!-- ===================================
+         HEADER SECTION
+    =================================== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="imgs/home/LSA-Logo.png" 
+                             alt="Lords Skill Academy Logo" 
+                             width="160" 
+                             height="48">
+                    </a>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="career-guidance.html">Career Guidance</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="community-events.html">Community</a></li>
+                        <li><a href="resources.html">Blogs</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================
+         MAIN CONTENT
+    =================================== -->
+    <main>
+        <!-- PAGE HERO SECTION -->
+        <section class="page-hero">
+            <div class="container">
+            <!--    <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span aria-current="page">Blog & Resources</span>
+                </div>
+                -->
+                <h1>Blog & Resources</h1>
+                <p class="page-hero-description">Career insights, skill guides, and industry knowledge to help you make informed decisions.</p>
+            </div>
+        </section>
+
+        <!-- BLOG INTRO SECTION -->
+        <section id="blog-intro">
+            <div class="container">
+                <div class="blog-intro">
+                    <p>
+                        Explore career guidance, programming tutorials, data science insights, cyber security updates, and skill development resources. 
+                        Content created for students, beginners, and career switchers by industry professionals. Our mission is to empower learners with practical, real-world knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT STATS SECTION -->
+        <section id="impact-stats" class="alt-bg">
+            <div class="container">
+                <h2>Our Impact in Education</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="5000">0+</div>
+                        <div class="stat-label">Students Empowered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Expert-Created Resources</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="95">0%</div>
+                        <div class="stat-label">Student Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORY FILTERS -->
+        <section id="blog-filters" class="alt-bg">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Articles</button>
+                    <button class="filter-btn" data-filter="career">Career Guidance</button>
+                    <button class="filter-btn" data-filter="programming">Programming</button>
+                    <button class="filter-btn" data-filter="data-science">Data Science</button>
+                    <button class="filter-btn" data-filter="cyber-security">Cyber Security</button>
+                    <button class="filter-btn" data-filter="skill-dev">Skill Development</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG LISTING -->
+        <section id="blog-posts">
+            <div class="container">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog Card 1 -->
+                    <article class="blog-card" data-category="career">
+                        <div class="blog-image">📋</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Career Guidance</span>
+                                <span class="blog-date">Jan 15, 2026</span>
+                            </div>
+                            <h3 class="blog-title">5 Career Paths for Beginners in Tech</h3>
+                            <p class="blog-excerpt">Explore five realistic career paths for people new to the technology industry. Learn about entry-level roles, growth potential, and what to expect.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="blog-card" data-category="programming">
+                        <div class="blog-image">💻</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Programming</span>
+                                <span class="blog-date">Jan 14, 2026</span>
+                            </div>
+                            <h3 class="blog-title">JavaScript Basics: Your First Steps in Web Development</h3>
+                            <p class="blog-excerpt">A beginner-friendly guide to understanding JavaScript fundamentals. Learn variables, functions, and how to build interactive web pages.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="blog-card" data-category="data-science">
+                        <div class="blog-image">📊</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Data Science</span>
+                                <span class="blog-date">Jan 13, 2026</span>
+                            </div>
+                            <h3 class="blog-title">Introduction to Python for Data Analysis</h3>
+                            <p class="blog-excerpt">Understand why Python is the go-to language for data science. Learn basic syntax, libraries, and how to start analyzing data.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="blog-card" data-category="skill-dev">
+                        <div class="blog-image">🚀</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Skill Development</span>
+                                <span class="blog-date">Jan 12, 2026</span>
+                            </div>
+                            <h3 class="blog-title">How to Build a Strong Tech Portfolio</h3>
+                            <p class="blog-excerpt">Your portfolio is your first impression to employers. Learn how to showcase your projects and skills effectively on GitHub and personal websites.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="blog-card" data-category="cyber-security">
+                        <div class="blog-image">🔒</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Cyber Security</span>
+                                <span class="blog-date">Jan 11, 2026</span>
+                            </div>
+                            <h3 class="blog-title">Cybersecurity Fundamentals: Protecting Your Digital Life</h3>
+                            <p class="blog-excerpt">Learn the basics of cybersecurity. Understand common threats, best practices for secure passwords, and how to protect personal data.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="blog-card" data-category="programming">
+                        <div class="blog-image">🎨</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Programming</span>
+                                <span class="blog-date">Jan 10, 2026</span>
+                            </div>
+                            <h3 class="blog-title">CSS Fundamentals: Building Beautiful Web Pages</h3>
+                            <p class="blog-excerpt">Master the basics of CSS styling. Learn selectors, properties, and how to create responsive layouts with flexbox and grid.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 7 -->
+                    <article class="blog-card" data-category="career">
+                        <div class="blog-image">💡</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Career Guidance</span>
+                                <span class="blog-date">Jan 9, 2026</span>
+                            </div>
+                            <h3 class="blog-title">Preparing for Your First Tech Job Interview</h3>
+                            <p class="blog-excerpt">Get ready for your first technical interview. Learn what to expect, how to prepare coding problems, and tips for leaving a great impression.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 8 -->
+                    <article class="blog-card" data-category="data-science">
+                        <div class="blog-image">📈</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Data Science</span>
+                                <span class="blog-date">Jan 8, 2026</span>
+                            </div>
+                            <h3 class="blog-title">Understanding Machine Learning: A Beginner's Guide</h3>
+                            <p class="blog-excerpt">Demystify machine learning. Learn supervised vs. unsupervised learning, common algorithms, and how ML powers modern applications.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 9 -->
+                    <article class="blog-card" data-category="skill-dev">
+                        <div class="blog-image">🎯</div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span class="blog-category">Skill Development</span>
+                                <span class="blog-date">Jan 7, 2026</span>
+                            </div>
+                            <h3 class="blog-title">Time Management Tips for Online Learning</h3>
+                            <p class="blog-excerpt">Learn strategies to stay consistent with online courses. Discover how to balance learning with work and personal commitments.</p>
+                            <a href="#" class="blog-cta">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED RESOURCES SECTION -->
+        <section id="featured-resources" class="alt-bg">
+            <div class="container">
+                <h2>Technologies We Teach</h2>
+                <div class="tech-showcase">
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">🐍</div>
+                            <div class="tech-name">Python</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">☕</div>
+                            <div class="tech-name">JavaScript</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🎨</div>
+                            <div class="tech-name">React</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">📊</div>
+                            <div class="tech-name">Data Science</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔒</div>
+                            <div class="tech-name">Cyber Security</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">⚙️</div>
+                            <div class="tech-name">Cloud & DevOps</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🗄️</div>
+                            <div class="tech-name">Databases</div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🤖</div>
+                            <div class="tech-name">AI/ML</div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 style="margin-top: var(--spacing-3xl);">Learning Resources</h2>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-icon">🗺️</div>
+                        <h3>Programming Roadmap</h3>
+                        <p>A step-by-step guide from beginner to junior developer. Learn what to study and in what order.</p>
+                        <a href="#" class="btn btn-primary" style="font-size: var(--font-size-sm); padding: 0.5rem 1.5rem;">Download</a>
+                    </div>
+
+                    <div class="featured-card">
+                        <div class="featured-icon">📚</div>
+                        <h3>Data Science Learning Path</h3>
+                        <p>Master the foundations: statistics, Python, and machine learning. Complete guide with resources.</p>
+                        <a href="#" class="btn btn-primary" style="font-size: var(--font-size-sm); padding: 0.5rem 1.5rem;">Download</a>
+                    </div>
+
+                    <div class="featured-card">
+                        <div class="featured-icon">🎓</div>
+                        <h3>Cyber Security Essentials</h3>
+                        <p>Essential concepts, best practices, and career guidance in the cybersecurity field. Start your journey.</p>
+                        <a href="#" class="btn btn-primary" style="font-size: var(--font-size-sm); padding: 0.5rem 1.5rem;">Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERT CONTRIBUTORS SECTION -->
+        <section id="expert-contributors">
+            <div class="container">
+                <h2>Meet Our Expert Contributors</h2>
+                <p class="section-intro" style="text-align: center; margin-bottom: var(--spacing-2xl);">Learn from industry professionals with real-world experience</p>
+                
+                <div class="expert-grid">
+                    <div class="expert-card">
+                        <div class="expert-avatar">👨‍💻</div>
+                        <h3 class="expert-name">Rajesh Kumar</h3>
+                        <p class="expert-title">Senior Full-Stack Developer</p>
+                        <p class="expert-bio">10+ years building scalable web applications. Passionate about clean code and mentoring the next generation of developers.</p>
+                        <div class="expert-skills">
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">AWS</span>
+                        </div>
+                    </div>
+
+                    <div class="expert-card">
+                        <div class="expert-avatar">👩‍💼</div>
+                        <h3 class="expert-name">Priya Sharma</h3>
+                        <p class="expert-title">Data Science Lead</p>
+                        <p class="expert-bio">Data-driven decision maker with expertise in ML algorithms. Helped 500+ students land data science roles.</p>
+                        <div class="expert-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Analytics</span>
+                        </div>
+                    </div>
+
+                    <div class="expert-card">
+                        <div class="expert-avatar">👨‍🔬</div>
+                        <h3 class="expert-name">Amit Verma</h3>
+                        <p class="expert-title">Cybersecurity Specialist</p>
+                        <p class="expert-bio">Certified Ethical Hacker with 8+ years in security. Dedicated to making cybersecurity accessible to everyone.</p>
+                        <div class="expert-skills">
+                            <span class="skill-tag">Security</span>
+                            <span class="skill-tag">Penetration Testing</span>
+                            <span class="skill-tag">Networks</span>
+                            <span class="skill-tag">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDENT SUCCESS STORIES -->
+        <section id="success-stories" class="alt-bg">
+            <div class="container">
+                <h2>Student Success Stories</h2>
+                <p class="section-intro" style="text-align: center; margin-bottom: var(--spacing-2xl);">Real transformations, real careers, real impact</p>
+                
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"LSA's resources helped me transition from marketing to data science. The step-by-step guides made complex concepts easy to understand. I landed my dream job in 6 months!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AK</div>
+                            <div>
+                                <div class="testimonial-name">Akshay Kumar</div>
+                                <div class="testimonial-role">Data Scientist at TechCorp</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The programming roadmap was exactly what I needed. It gave me clarity on what to learn and in what order. Now I'm working as a full-stack developer!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">RJ</div>
+                            <div>
+                                <div class="testimonial-name">Ravi Joshi</div>
+                                <div class="testimonial-role">Full-Stack Developer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The cybersecurity resources demystified everything. I went from knowing nothing to passing my CEH certification. The expert insights were invaluable!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MB</div>
+                            <div>
+                                <div class="testimonial-name">Meera Bhatt</div>
+                                <div class="testimonial-role">Security Analyst</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATIONAL RESOURCES SECTION -->
+        <section id="educational-resources">
+            <div class="container">
+                <h2>Educational Resources</h2>
+                
+                <div class="resource-item">
+                    <h3>Free Coding Challenges</h3>
+                    <p>Practice your programming skills with curated coding problems. From basic to intermediate level challenges.</p>
+                    <a href="#" class="btn btn-primary">Explore Challenges</a>
+                </div>
+
+                <div class="resource-item">
+                    <h3>Recommended Learning Platforms</h3>
+                    <p>A curated list of free and paid platforms we recommend for learning programming, data science, and more.</p>
+                    <a href="#" class="btn btn-primary">View Platforms</a>
+                </div>
+
+                <div class="resource-item">
+                    <h3>Industry Blogs & Podcasts</h3>
+                    <p>Stay updated with tech trends. We recommend industry-leading blogs and podcasts for continuous learning.</p>
+                    <a href="#" class="btn btn-primary">View Resources</a>
+                </div>
+
+                <div class="resource-item">
+                    <h3>Interview Preparation Guide</h3>
+                    <p>Comprehensive guide to preparing for technical interviews. Includes common questions and best practices.</p>
+                    <a href="#" class="btn btn-primary">Get Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DUAL CTA SECTION -->
+        <section id="dual-cta">
+            <div class="container">
+                <div class="cta-dual">
+                    <div class="cta-box">
+                        <h3>Need Career Guidance?</h3>
+                        <p>Confused about your path? Our career advisors can help you understand your options and create a personalized roadmap.</p>
+                        <a href="career-guidance.html" class="btn btn-primary">Explore Career Guidance</a>
+                    </div>
+
+                    <div class="cta-box">
+                        <h3>Ready to Learn?</h3>
+                        <p>Explore our skill-focused programs in Programming and Data Science. Start your learning journey today.</p>
+                        <a href="index.html#schools" class="btn btn-primary">View Courses</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO CONTENT BLOCK -->
+        <section id="seo-content" class="alt-bg">
+            <div class="container">
+                <div class="seo-block">
+                    <h2 style="padding-left: 0; margin-top: 0;">Skill-Based Learning at Lords Skill Academy</h2>
+                    <p>
+                        Lords Skill Academy believes in teaching skills that matter in the job market. Our blog and resources section provides 
+                        free, high-quality content about programming, data science, cyber security, and career development. Whether you're a 
+                        student exploring career options, a beginner learning to code, or a professional upskilling in tech, you'll find 
+                        actionable insights and practical guides here.
+                    </p>
+                    <p>
+                        From JavaScript tutorials and Python data analysis guides to interview preparation and career roadmaps, we cover topics 
+                        that help you succeed. Our resources are written by industry professionals with real-world experience, ensuring relevance 
+                        and practical value. Read our blog, download learning resources, and take the first step toward your tech career.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Start Your Learning Journey Today</h2>
+                <p>Access free resources, read expert insights, and discover your path in tech.</p>
+                <a href="contact-us.html" class="btn btn-white">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================================
+         FOOTER SECTION
+    =================================== -->
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+            <div class="footer-logo">
+                <img src="imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="school-of-programming.html">Programming</a></li>
+                        <li><a href="ds.html">Data Science</a></li>
+                        <li><a href="career-guidance.html">Career Guidance</a></li>
+                        <li><a href="trainers.html">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community-events.html">Community Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Location & Contact</h3>
+                    <ul>
+                        <li>📍 Serving students worldwide, with roots in India</li>
+                        <li><a href="contact-us.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Lords Skill Academy. All rights reserved. | <strong>Affiliated with:</strong> Lords Institute of Engineering & Technology (LIET)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================
+         JAVASCRIPT - BLOG FILTERING & INTERACTIONS
+    =================================== -->
+    <script>
+        /**
+         * BLOG CATEGORY FILTERING
+         * Filters blog posts based on selected category without page reload
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const selectedCategory = this.getAttribute('data-filter');
+
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+
+                    // Filter blog cards
+                    blogCards.forEach(card => {
+                        if (selectedCategory === 'all') {
+                            card.classList.remove('hidden');
+                        } else {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (cardCategory === selectedCategory) {
+                                card.classList.remove('hidden');
+                            } else {
+                                card.classList.add('hidden');
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Keyboard accessibility for filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        });
+
+        /**
+         * SMOOTH SCROLLING FOR ANCHOR LINKS
+         */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                if (href === '#') {
+                    e.preventDefault();
+                    return;
+                }
+
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /**
+         * PAGE LOAD ANIMATION
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            blogCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 600ms ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 50);
+            });
+        });
+
+        /**
+         * ANIMATED COUNTER FOR STATS
+         */
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const suffix = element.textContent.match(/[+%]?$/)[0];
+            const increment = target / 50;
+            let current = 0;
+
+            const interval = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(interval);
+                }
+                element.textContent = Math.floor(current) + suffix;
+            }, 30);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const statCards = document.querySelectorAll('.stat-number');
+            
+            const observerOptions = {
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                        entry.target.classList.add('animated');
+                        animateCounter(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            statCards.forEach(card => observer.observe(card));
+        });
+    </script>
+    <script>
+        (function() {
+            const glow = document.querySelector('.cursor-glow');
+            if (!glow) return;
+
+            let currentX = window.innerWidth / 2;
+            let currentY = window.innerHeight / 2;
+            let targetX = currentX;
+            let targetY = currentY;
+            let size = 24;
+            let t = 0;
+
+            function updateSize() {
+                size = glow.offsetWidth / 2 || 24;
+            }
+
+            updateSize();
+            window.addEventListener('resize', updateSize);
+
+            function animate() {
+                t += 0.04;
+                const wobbleX = Math.sin(t) * 4;
+                const wobbleY = Math.cos(t * 0.9) * 4;
+
+                currentX += (targetX - currentX) * 0.14;
+                currentY += (targetY - currentY) * 0.14;
+                glow.style.transform = `translate3d(${currentX - size + wobbleX}px, ${currentY - size + wobbleY}px, 0)`;
+                requestAnimationFrame(animate);
+            }
+
+            function parseRgb(color) {
+                const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+                if (!match) return null;
+                return {
+                    r: parseInt(match[1], 10),
+                    g: parseInt(match[2], 10),
+                    b: parseInt(match[3], 10),
+                    a: match[4] !== undefined ? parseFloat(match[4]) : 1
+                };
+            }
+
+            function getEffectiveBgColor(el) {
+                let node = el;
+                while (node && node !== document.documentElement) {
+                    const bg = window.getComputedStyle(node).backgroundColor;
+                    const rgb = parseRgb(bg);
+                    if (rgb && rgb.a > 0) {
+                        return rgb;
+                    }
+                    node = node.parentElement;
+                }
+                return { r: 255, g: 255, b: 255, a: 1 };
+            }
+
+            function updateGlowColor(x, y) {
+                const el = document.elementFromPoint(x, y);
+                if (!el) return;
+
+                const bg = getEffectiveBgColor(el);
+                const luminance = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
+
+                if (luminance > 0.55) {
+                    glow.style.setProperty('--glow-core', 'rgba(37, 99, 235, 0.55)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.32)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 18px rgba(37, 99, 235, 0.35)';
+                } else {
+                    glow.style.setProperty('--glow-core', 'rgba(56, 189, 248, 0.6)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.35)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.32)';
+                }
+            }
+
+            window.addEventListener('mousemove', (event) => {
+                targetX = event.clientX;
+                targetY = event.clientY;
+                glow.style.opacity = '1';
+                updateGlowColor(event.clientX, event.clientY);
+            });
+
+            window.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+
+            animate();
+        })();
+
+        /**
+         * HAMBURGER MENU TOGGLE
+         */
+        (function() {
+            const hamburgerBtn = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (!hamburgerBtn || !navMenu) return;
+
+            hamburgerBtn.addEventListener('click', function() {
+                hamburgerBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideHeader = event.target.closest('.header');
+                if (!isClickInsideHeader && navMenu.classList.contains('active')) {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
