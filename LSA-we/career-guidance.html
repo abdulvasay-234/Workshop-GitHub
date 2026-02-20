@@ -1,0 +1,1989 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Career guidance and counseling at Lords Skill Academy. Get personalized guidance, skill-based career planning, and mentorship from industry experts.">
+    <meta name="keywords" content="career guidance, career counseling, career planning, skill assessment, industry mentors, career advice">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lordsskillacademy.com/career-guidance.html">
+    <title>Career Guidance & Counseling | Lords Skill Academy</title>
+    
+    <style>
+        /* ===================================
+           CSS VARIABLES - DESIGN SYSTEM
+        =================================== */
+        :root {
+            /* Colors */
+            --color-primary: #1e40af;
+            --color-primary-dark: #1e3a8a;
+            --color-primary-light: #3b82f6;
+            --color-success: #10b981;
+            --color-success-light: #d1fae5;
+            --color-warning: #f59e0b;
+            --color-text-primary: #0f172a;
+            --color-text-secondary: #4b5563;
+            --color-text-tertiary: #6b7280;
+            --color-bg-primary: #ffffff;
+            --color-bg-secondary: #f8fafc;
+            --color-bg-accent: #eff6ff;
+            --color-border: #e2e8f0;
+
+            /* Typography */
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --font-size-xs: clamp(0.75rem, 1.5vw, 0.875rem);
+            --font-size-sm: clamp(0.875rem, 1.75vw, 1rem);
+            --font-size-base: clamp(1rem, 2vw, 1.125rem);
+            --font-size-lg: clamp(1.125rem, 2.5vw, 1.375rem);
+            --font-size-xl: clamp(1.375rem, 3vw, 1.75rem);
+            --font-size-2xl: clamp(1.75rem, 4vw, 2.25rem);
+            --font-size-3xl: clamp(2.25rem, 5vw, 3rem);
+            --font-size-4xl: clamp(2.5rem, 6vw, 3.5rem);
+
+            /* Line Heights */
+            --line-height-tight: 1.2;
+            --line-height-normal: 1.5;
+            --line-height-relaxed: 1.7;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-2xl: 4rem;
+            --spacing-3xl: 5rem;
+
+            /* Border Radius */
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+            --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+            --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-normal: 250ms ease;
+
+            /* Max Width */
+            --container-max: 1200px;
+            --container-padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            :root {
+                --container-padding: 2rem;
+            }
+        }
+
+        /* ===================================
+           TECH ANIMATIONS & EFFECTS
+        =================================== */
+        @keyframes floatIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes logoOrbit {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-4px) rotate(-0.6deg);
+            }
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 8px rgba(0, 212, 255, 0.2), 0 0 15px rgba(0, 212, 255, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 15px rgba(0, 212, 255, 0.4), 0 0 25px rgba(0, 212, 255, 0.2);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes borderGlow {
+            0% {
+                border-color: rgba(0, 212, 255, 0.2);
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+            }
+            50% {
+                border-color: rgba(0, 212, 255, 0.5);
+                box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+            }
+            100% {
+                border-color: rgba(0, 212, 255, 0.2);
+                box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+            }
+        }
+
+        /* Scroll reveal initial state */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        .reveal.active {
+            animation: revealUp 0.4s ease-out forwards;
+        }
+
+        @media (min-width: 1440px) {
+            :root {
+                --container-padding: 3rem;
+            }
+        }
+
+        /* ===================================
+           RESET & BASE STYLES
+        =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-normal);
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-primary);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        /* ===================================
+           UTILITY CLASSES
+        =================================== */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: rotate(45deg);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: #ffffff;
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.3), 0 0 15px rgba(30, 64, 175, 0.15), 0 0 30px rgba(0, 212, 255, 0.1);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 30px rgba(30, 64, 175, 0.4), 0 0 25px rgba(30, 64, 175, 0.3), 0 0 40px rgba(0, 212, 255, 0.2);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: #1e40af;
+            box-shadow: 0 8px 20px rgba(30, 64, 175, 0.2), 0 0 12px rgba(30, 64, 175, 0.1), 0 0 25px rgba(0, 212, 255, 0.08);
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white:hover {
+            background-color: #f9fafb;
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 12px 30px rgba(30, 64, 175, 0.25), 0 0 35px rgba(0, 212, 255, 0.15);
+        }
+
+        /* ===================================
+           HEADER STYLES
+        =================================== */
+        .header {
+            background-color: var(--color-bg-primary);
+            padding: 0.5rem 0;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: clamp(120px, 20vw, 160px);
+            height: auto;
+            background-color: #f3f4f6;
+            padding: 0.5rem;
+            border-radius: 4px;
+            animation: logoOrbit 4s ease-in-out infinite;
+            transform-origin: center;
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger-menu span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .nav-menu {
+            display: none;
+        }
+
+        .nav-menu.active {
+            display: flex;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-accent) 100%);
+            padding: var(--spacing-lg);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.1);
+            z-index: 1000;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-menu ul {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: var(--spacing-sm);
+        }
+
+        .nav-menu a {
+            font-weight: 500;
+            color: #4b5563;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: var(--spacing-sm) 0;
+            display: block;
+        }
+
+        .nav-menu a:hover {
+            color: #1e40af;
+            text-shadow: 0 0 6px rgba(30, 64, 175, 0.3);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, #1e40af);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+            box-shadow: 0 0 6px rgba(0, 212, 255, 0.35);
+        }
+
+        .nav-menu a {
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            color: var(--color-text-primary);
+            transition: color var(--transition-normal);
+        }
+
+        .nav-menu a:hover {
+            color: var(--color-primary);
+        }
+
+        /* ===================================
+           PAGE HERO SECTION
+        =================================== */
+        .page-hero {
+            padding: var(--spacing-3xl) 0;
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(90deg, transparent 1px, rgba(255, 255, 255, 0.05) 1px, rgba(255, 255, 255, 0.05) 2px, transparent 2px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.2) 0%, rgba(30, 64, 175, 0.15) 40%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-hero h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(30, 64, 175, 0.5), 0 0 40px rgba(0, 212, 255, 0.3);
+            animation: floatIn 0.8s ease-out;
+            filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3));
+        }
+
+        .page-hero-description {
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-lg);
+            color: #ffffff;
+            opacity: 0.95;
+            max-width: 600px;
+            animation: floatIn 0.8s ease-out 0.1s both;
+            text-shadow: 0 0 15px rgba(30, 64, 175, 0.2), 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: var(--spacing-sm);
+            font-size: var(--font-size-sm);
+            opacity: 0.95;
+            margin-bottom: var(--spacing-lg);
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb a {
+            color: #ffffff;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 0.8;
+        }
+
+        .breadcrumb span {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ===================================
+           REVEAL & SCROLL ANIMATIONS
+        =================================== */
+        .reveal {
+            opacity: 0;
+            animation: revealUp 0.4s ease-out forwards;
+        }
+
+        .reveal.active {
+            animation: revealUp 0.4s ease-out forwards;
+        }
+
+        /* ===================================
+           CONTENT SECTION
+        =================================== */
+        section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        #what-we-help {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #why-guidance {
+            padding-bottom: 0;
+        }
+
+        #why-guidance h2 {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        #why-guidance p {
+            margin-top: 0;
+        }
+
+        #trust-affiliation {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #how-it-works {
+            padding-top: var(--spacing-2xl);
+            padding-bottom: 0;
+        }
+
+        #our-philosophy {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #common-questions {
+            padding-top: 0;
+        }
+
+        section.alt-bg {
+            background: linear-gradient(135deg, var(--color-bg-secondary) 0%, rgba(15, 23, 42, 0.02) 100%);
+        }
+
+        h2 {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            line-height: var(--line-height-tight);
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-lg);
+            margin-top: 0;
+            position: relative;
+            padding-left: 0;
+            padding-bottom: 0;
+            text-shadow: 0 0 20px rgba(30, 64, 175, 0.3), 0 0 40px rgba(0, 212, 255, 0.2);
+        }
+
+        h2::before {
+            display: none;
+        }
+
+        h2::after {
+            display: none;
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+            text-shadow: 0 0 15px rgba(30, 64, 175, 0.2), 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ===================================
+           CARDS GRID - GUIDANCE AREAS
+        =================================== */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1), inset 0 0 20px rgba(0, 212, 255, 0.02);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.2), 0 0 30px rgba(0, 212, 255, 0.15), inset 0 0 20px rgba(0, 212, 255, 0.05);
+            transform: translateY(-4px);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-bg-accent);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2), 0 0 20px rgba(0, 212, 255, 0.15);
+        }
+
+        .card:hover .card-icon {
+            animation: glow 1.5s ease-in-out infinite;
+            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3), 0 0 25px rgba(0, 212, 255, 0.25);
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .card p {
+            font-size: var(--font-size-sm);
+            margin-bottom: 0;
+        }
+
+        /* ===================================
+           TIMELINE STEPS
+        =================================== */
+        .timeline {
+            position: relative;
+            padding: var(--spacing-lg) 0;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-primary), transparent);
+        }
+
+        .timeline-item {
+            margin-bottom: var(--spacing-2xl);
+            padding-left: 90px;
+            position: relative;
+        }
+
+        .timeline-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: var(--font-size-lg);
+        }
+
+        .timeline-content h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .timeline-content p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 480px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 80px;
+            }
+
+            .timeline-number {
+                width: 50px;
+                height: 50px;
+                font-size: var(--font-size-base);
+            }
+        }
+
+        /* ===================================
+           WHO SHOULD SECTION
+        =================================== */
+        .who-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .who-item {
+            background: var(--color-bg-secondary);
+            border-left: 4px solid var(--color-primary);
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-md);
+        }
+
+        .who-item h3 {
+            margin-top: 0;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+
+        .who-item p {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 768px) {
+            .who-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===================================
+           PHILOSOPHY SECTION
+        =================================== */
+        .philosophy-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+        }
+
+        .philosophy-item {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+            padding: var(--spacing-md);
+            background: var(--color-bg-accent);
+            border-radius: var(--radius-md);
+        }
+
+        .philosophy-item::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 32px;
+            width: 32px;
+            height: 32px;
+            background: var(--color-success);
+            border-radius: 50%;
+            color: #ffffff;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .philosophy-text {
+            line-height: var(--line-height-relaxed);
+        }
+
+        @media (min-width: 768px) {
+            .philosophy-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===================================
+           COMMON QUESTIONS (FAQ)
+        =================================== */
+        .faq-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .faq-item {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            padding: var(--spacing-lg);
+            font-weight: 600;
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-md);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.25rem;
+            color: var(--color-primary);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item[open] summary::after {
+            content: '–';
+        }
+
+        .faq-item p {
+            margin: 0;
+            padding: 0 var(--spacing-lg) var(--spacing-lg);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ===================================
+           QUICK BOOKING SECTION
+        =================================== */
+        .booking-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            padding: var(--spacing-3xl) 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 60px rgba(0, 212, 255, 0.1), 0 0 30px rgba(30, 64, 175, 0.2);
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .booking-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .booking-header h2 {
+            color: #ffffff;
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        .booking-header h2::before {
+            display: none;
+        }
+
+        .booking-header h2::after {
+            display: none;
+        }
+
+        .booking-subtitle {
+            font-size: var(--font-size-lg);
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: var(--spacing-2xl);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .booking-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .time-slot {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-normal);
+            backdrop-filter: blur(10px);
+        }
+
+        .time-slot:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .time-slot-time {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            margin-bottom: var(--spacing-sm);
+            color: #ffffff;
+        }
+
+        .time-slot-description {
+            font-size: var(--font-size-sm);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+        }
+
+        .booking-cta {
+            text-align: center;
+        }
+
+        .booking-note {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: var(--font-size-sm);
+            margin-top: var(--spacing-lg);
+            font-style: italic;
+        }
+
+        /* ===================================
+           CTA SECTION
+        =================================== */
+        .cta-main {
+            background: linear-gradient(135deg, var(--color-bg-accent) 0%, rgba(15, 23, 42, 0.05) 100%);
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            margin: var(--spacing-2xl) 0;
+        }
+
+        .cta-main h2 {
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        .cta-main h2::before {
+            display: none;
+        }
+
+        .cta-main h2::after {
+            display: none;
+        }
+
+        .cta-main p {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .cta-reassurance {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--color-text-primary);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            margin-bottom: var(--spacing-lg);
+            font-size: var(--font-size-sm);
+        }
+
+        .cta-reassurance strong {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        /* ===================================
+           TRUST SECTION
+        =================================== */
+        .trust-section {
+            background: var(--color-bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-2xl);
+            text-align: center;
+            margin: var(--spacing-2xl) 0;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            box-shadow: 0 0 40px rgba(30, 64, 175, 0.1), inset 0 0 30px rgba(0, 212, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .trust-section:hover {
+            border-color: rgba(0, 212, 255, 0.4);
+            box-shadow: 0 0 50px rgba(30, 64, 175, 0.15), inset 0 0 30px rgba(0, 212, 255, 0.08);
+        }
+
+        .trust-section h2 {
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        .trust-section h2::before {
+            display: none;
+        }
+
+        .trust-section h2::after {
+            display: none;
+        }
+
+        .trust-logo {
+            margin: var(--spacing-md) 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .trust-logo img {
+            height: 160px;
+            width: auto;
+            background: #ffffff;
+            padding: var(--spacing-sm);
+            border-radius: var(--radius-md);
+        }
+
+        .trust-statement {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-lg);
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ===================================
+           FINAL CTA SECTION
+        =================================== */
+        .final-cta {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+            color: #ffffff;
+            padding: var(--spacing-3xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 0 50px rgba(0, 212, 255, 0.1), 0 0 30px rgba(30, 64, 175, 0.15);
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .final-cta h2 {
+            color: #ffffff;
+            margin-top: 0;
+            padding-left: 0;
+            text-shadow: 0 0 25px rgba(0, 212, 255, 0.3), 0 0 50px rgba(0, 212, 255, 0.15), 0 0 75px rgba(30, 64, 175, 0.2);
+        }
+
+        .final-cta h2::before {
+            display: none;
+        }
+
+        .final-cta h2::after {
+            display: none;
+        }
+
+        .final-cta p {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-lg);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* CTA Buttons with glow animation */
+        .final-cta .btn,
+        .booking-section .btn {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* ===================================
+           FOOTER STYLES
+        =================================== */
+        footer {
+            background-color: #1f2937;
+            color: #d1d5db;
+            padding: 3rem 1rem 1rem;
+            margin-top: 0;
+        }
+
+        footer > div {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 0;
+        }
+
+        .footer-logo img {
+            width: 160px;
+            height: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-section a {
+            color: #d1d5db;
+        }
+
+        .footer-section a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.875rem;
+            color: #d1d5db;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN
+        =================================== */
+        @media (min-width: 768px) {
+            .nav-menu {
+                display: flex !important;
+                position: static !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                flex-direction: row;
+                background: transparent !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                animation: none !important;
+            }
+
+            .nav-menu ul {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .hamburger-menu {
+                display: none !important;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3rem;
+            }
+
+            h2 {
+                padding-bottom: var(--spacing-lg);
+            }
+
+            h2::after {
+                width: 80px;
+            }
+
+            .cta-main {
+                padding: var(--spacing-3xl);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hamburger-menu {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: var(--spacing-2xl) 0;
+            }
+
+            h2 {
+                margin-top: var(--spacing-xl);
+                padding-bottom: var(--spacing-md);
+            }
+
+            h2::after {
+                width: 50px;
+            }
+
+            .page-hero h1 {
+                margin-bottom: var(--spacing-md);
+            }
+
+            .cta-main {
+                padding: var(--spacing-lg);
+            }
+        }
+
+        @media (max-width: 480px) {
+            section {
+                padding: var(--spacing-xl) 0;
+            }
+
+            .page-hero {
+                padding: var(--spacing-2xl) 0;
+            }
+
+            .page-hero h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            h2 {
+                margin-top: var(--spacing-lg);
+                font-size: var(--font-size-xl);
+            }
+
+            .btn {
+                padding: 0.75rem 1.5rem;
+                font-size: var(--font-size-sm);
+            }
+
+            .cta-main {
+                padding: var(--spacing-lg);
+            }
+        }
+
+        /* ===================================
+           ACCESSIBILITY
+        =================================== */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+        /* ===================================
+           CURSOR GLOW EFFECT
+        =================================== */
+        .cursor-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                var(--glow-core, rgba(56, 189, 248, 0.55)) 0%,
+                var(--glow-mid, rgba(59, 130, 246, 0.3)) 35%,
+                var(--glow-edge, rgba(59, 130, 246, 0)) 70%
+            );
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            mix-blend-mode: normal;
+            transform: translate3d(-9999px, -9999px, 0);
+            will-change: transform, opacity, background;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .cursor-glow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <!-- ===================================
+         HEADER SECTION
+    =================================== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="imgs/home/LSA-Logo.png" 
+                             alt="Lords Skill Academy Logo" 
+                             width="160" 
+                             height="48">
+                    </a>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="career-guidance.html">Career Guidance</a></li>
+                        <li><a href="trainers.html">Trainers</a></li>
+                        <li><a href="community-events.html">Community</a></li>
+                        <li><a href="resources.html">Blogs</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================
+         MAIN CONTENT
+    =================================== -->
+    <main>
+        <!-- PAGE HERO SECTION -->
+        <section class="page-hero">
+            <div class="container">
+       <!--         <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span aria-current="page">Career Guidance</span>
+                </div>
+                -->
+                <h1>Career Guidance & Counseling</h1>
+                <p class="page-hero-description">Get clarity, direction, and a skill-based roadmap for your career — guided by industry mentors.</p>
+            </div>
+        </section>
+
+        <!-- WHY CAREER GUIDANCE MATTERS -->
+        <section id="why-guidance" class="alt-bg">
+            <div class="container">
+                <h2>Why Career Guidance Matters</h2>
+                
+                <div style="display: grid; grid-template-columns: 1fr; gap: var(--spacing-lg); align-items: center; margin-bottom: var(--spacing-2xl);">
+                    <div>
+                        <p>
+                            Many students choose courses without understanding real career outcomes. This leads to confusion, wasted time, and unfulfilled expectations. <strong>Career guidance is about clarity and direction.</strong>
+                        </p>
+                        <p>
+                            At Lords Skill Academy, we believe every decision should be backed by honest advice. Before you invest your time and money, you need to know:
+                        </p>
+                        <ul style="margin-left: var(--spacing-lg); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">
+                            <li style="margin-bottom: var(--spacing-sm);">What skills are actually in demand?</li>
+                            <li style="margin-bottom: var(--spacing-sm);">Which career path suits your background and interests?</li>
+                            <li style="margin-bottom: var(--spacing-sm);">How long does it take to become job-ready?</li>
+                            <li style="margin-bottom: var(--spacing-sm);">What does success really look like in your field?</li>
+                        </ul>
+                        <p style="margin-top: var(--spacing-lg);">
+                            Our career counseling is designed to answer these questions honestly and help you make confident decisions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST & AFFILIATION -->
+        <section id="trust-affiliation" class="alt-bg">
+            <div class="container">
+                <div class="trust-section">
+                    <h2>Backed by Industry Expertise & Affiliation</h2>
+                    
+                    <div class="trust-logo">
+                        <img src="imgs/home/LIET-Logo.png" 
+                             alt="Lords Institute of Engineering & Technology Logo" 
+                             width="160" 
+                             height="80">
+                    </div>
+
+                    <p class="trust-statement">
+                        Lords Skill Academy (LSA) is affiliated with <strong>Lords Institute of Engineering & Technology (LIET)</strong>, 
+                        a well-established educational institution. Our counselors are industry professionals with years of experience. 
+                        Their guidance is backed by real-world insights and proven career outcomes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT WE HELP YOU WITH -->
+        <section id="what-we-help">
+            <div class="container">
+                <h2>What We Help You With</h2>
+                
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Career Clarity & Goal Setting</h3>
+                        <p>Understand your strengths, interests, and what success means to you. Set clear, achievable career goals backed by market research.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">📊</div>
+                        <h3>Skill-Gap Analysis</h3>
+                        <p>Identify the gap between where you are and where you want to be. Learn what technical and soft skills you need to develop.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🗺️</div>
+                        <h3>Course & Learning Path</h3>
+                        <p>Get personalized recommendations for courses and learning paths. We suggest what's right for you — not what's trending.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🔍</div>
+                        <h3>Industry Role Awareness</h3>
+                        <p>Learn about real job roles, what employers expect, and the career progression path in your chosen field.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">🔄</div>
+                        <h3>Career Transition Planning</h3>
+                        <p>Switching careers? We help you understand how your current skills transfer and what new skills you need to bridge the gap.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon">💼</div>
+                        <h3>Post-Course Support</h3>
+                        <p>Mentoring continues after your course ends. Get help with portfolios, interviews, and landing your first role.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN CTA SECTION -->
+        <!--
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-header">
+                    <h2>Book Your Free Counseling Session</h2>
+                    <p class="booking-subtitle">Select a time slot that works best for you. Our counselors are ready to guide you toward the right career path.</p>
+                </div>
+
+                <div class="booking-slots">
+                    <div class="time-slot" onclick="window.location.href='contact-us.html';">
+                        <div class="time-slot-time">🌅 Morning</div>
+                        <div class="time-slot-description">9:00 AM - 12:00 PM</div>
+                    </div>
+
+                    <div class="time-slot" onclick="window.location.href='contact-us.html';">
+                        <div class="time-slot-time">☀️ Afternoon</div>
+                        <div class="time-slot-description">2:00 PM - 5:00 PM</div>
+                    </div>
+
+                    <div class="time-slot" onclick="window.location.href='contact-us.html';">
+                        <div class="time-slot-time">🌙 Evening</div>
+                        <div class="time-slot-description">6:00 PM - 8:00 PM</div>
+                    </div>
+
+                    <div class="time-slot" onclick="window.location.href='contact-us.html';">
+                        <div class="time-slot-time">📅 Custom Time</div>
+                        <div class="time-slot-description">Let us know your preference</div>
+                    </div>
+                </div>
+
+                <div class="booking-cta">
+                    <a href="contact-us.html" class="btn btn-white">Book Your Free Session Now</a>
+                    <p class="booking-note">✓ 30-45 minute personalized counseling session | No hidden charges</p>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- WHO SHOULD TAKE CAREER COUNSELING -->
+        <!--
+        <section id="who-should" class="alt-bg">
+            <div class="container">
+                <h2>Who Should Take Career Counseling?</h2>
+                
+                <div class="who-list">
+                    <div class="who-item">
+                        <h3>🎓 School & College Students</h3>
+                        <p>Confused about what to do after graduation? Career counseling helps you explore options and make informed decisions early.</p>
+                    </div>
+
+                    <div class="who-item">
+                        <h3>🚀 Fresh Graduates</h3>
+                        <p>Degree in hand, but unsure about your first role? We help you position yourself and enter the job market with confidence.</p>
+                    </div>
+
+                    <div class="who-item">
+                        <h3>🔀 Career Switchers</h3>
+                        <p>Ready to move into tech or a new field? Counseling helps you understand the switch and build a realistic roadmap.</p>
+                    </div>
+
+                    <div class="who-item">
+                        <h3>💪 Working Professionals</h3>
+                        <p>Want to upskill or pivot within tech? Get guidance on what skills to develop and how it impacts your career trajectory.</p>
+                    </div>
+
+                    <div class="who-item">
+                        <h3>❓ Anyone Unsure About Next Steps</h3>
+                        <p>Feeling stuck or lost? Sometimes you just need clarity. Our advisors help you think through your options.</p>
+                    </div>
+
+                    <div class="who-item">
+                        <h3>👥 Parents & Guardians</h3>
+                        <p>Want to understand your child's options? We welcome parents to join sessions and understand the career landscape.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+
+        <!-- HOW LSA CAREER COUNSELING WORKS -->
+        <section id="how-it-works">
+            <div class="container">
+                <h2>How LSA Career Counseling Works</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h3>Understanding Your Background & Interests</h3>
+                            <p>
+                                We start by listening. Your counselor understands your educational background, work experience, interests, 
+                                and constraints. This is a conversation, not a questionnaire.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h3>Identifying Strengths & Skill Gaps</h3>
+                            <p>
+                                Together, we assess your current skills, strengths, and areas for growth. This helps us understand where you 
+                                excel and where you need to develop further.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h3>Exploring Relevant Career Paths</h3>
+                            <p>
+                                Based on your profile, we explore 2-3 realistic career paths. Your counselor shares insights about roles, 
+                                growth potential, salaries, and day-to-day responsibilities.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-content">
+                            <h3>Creating Your Skill-Based Learning Roadmap</h3>
+                            <p>
+                                If you decide to pursue a path, we build a custom roadmap. This includes which course to take, what order, 
+                                and what additional learning or projects to pursue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-content">
+                            <h3>Ongoing Mentorship Support</h3>
+                            <p>
+                                If you enroll with LSA, mentoring continues. Your counselor checks in, helps with doubts, and prepares you 
+                                for your career after course completion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR GUIDANCE PHILOSOPHY -->
+        <section id="our-philosophy" class="alt-bg">
+            <div class="container">
+                <h2>Our Guidance Philosophy — The LSA Difference</h2>
+                
+                <ul class="philosophy-list">
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>No Forced Course Selling</strong> — Our counselors don't push courses. We recommend based on what's right for you, even if it means you don't enroll.</span>
+                    </li>
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>Honest, Practical Advice</strong> — No exaggerated promises. We tell you the truth about timelines, job markets, and effort required.</span>
+                    </li>
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>Skill-First Thinking</strong> — We focus on building real skills, not just certifications. Employers care about what you can do, not what badge you have.</span>
+                    </li>
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>Career-Focused Guidance</strong> — Every decision we suggest is tied to your long-term career. Short-term trends don't drive our advice.</span>
+                    </li>
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>Long-Term Student Success</strong> — We measure success by your career outcomes, not by enrollment numbers. Your wins are our wins.</span>
+                    </li>
+                    <li class="philosophy-item">
+                        <span class="philosophy-text"><strong>Mentorship, Not Just Advice</strong> — Our counselors are industry professionals who've been where you are. They guide based on real experience.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+                <!-- MAIN CTA SECTION (Original) -->
+            <div class="container">
+                <div class="cta-main">
+                    <h2>Confused About Your Career Path? Let's Talk.</h2>
+                    
+                    <div class="cta-reassurance">
+                        <strong>✓ Our counselors guide you — they don't sell courses.</strong> We focus on what's right for you, 
+                        even if it means recommending something other than LSA.
+                    </div>
+
+                    <p>
+                        Every student is different. Your concerns, background, and goals are unique. 
+                        Let's have a real conversation to find the right direction for you.
+                    </p>
+
+                    <a href="contact-us.html" class="btn btn-primary">Book Free Career Counseling</a>
+                </div>
+            </div>
+
+        <!-- COMMON CAREER QUESTIONS -->
+        <section id="common-questions">
+            <div class="container">
+                <h2>Common Career Questions We Address</h2>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>Which career path suits my background?</summary>
+                        <p>
+                            This depends on your skills, interests, and the market. A non-technical background? Fine—many successful tech professionals started there. 
+                            We help you understand which paths are realistic and rewarding for you.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Is coding right for me?</summary>
+                        <p>
+                            Not everyone needs to code. Depending on your career goals, you might pursue data analysis, product management, design, 
+                            or other tech roles. We help you figure out what fits your strengths.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How do I switch careers into tech?</summary>
+                        <p>
+                            Career switching is very possible. The key is having a clear roadmap. We assess your transferable skills and help you 
+                            build the new skills you need to make a smooth transition.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What skills are actually in demand?</summary>
+                        <p>
+                            Demand changes, but fundamentals remain. Technical skills matter, but so do soft skills, problem-solving, and learning ability. 
+                            We share current industry data and what employers actually value.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>How long does it take to become job-ready?</summary>
+                        <p>
+                            It varies, but typically 3-6 months of focused learning can position you for an entry-level role. It's not just course completion—
+                            it's building projects, practice, and interview readiness.
+                        </p>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>What if I fail or struggle?</summary>
+                        <p>
+                            Struggles are part of learning. We help you understand what's normal, how to push through, and when to pivot. Most importantly, 
+                            we're here to support you—you're not alone.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        </section>
+
+        <!-- FINAL CTA -->
+        <!--
+        <section class="final-cta">
+            <div class="container">
+                <h2>Start Your Career Journey With Confidence</h2>
+                <p>Get honest guidance, clear direction, and a personalized roadmap for your success.</p>
+                <a href="contact-us.html" class="btn btn-white">Get in Touch Today</a>
+            </div>
+        </section>
+        -->
+    </main>
+
+    <!-- ===================================
+         FOOTER SECTION
+    =================================== -->
+    <footer>
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+            <div class="footer-logo">
+                <img src="imgs/home/LSA-Logo-White.png" alt="Lords Skill Academy Logo" width="160" height="48">
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Courses</h3>
+                    <ul>
+                        <li><a href="school-of-programming.html">Programming</a></li>
+                        <li><a href="ds.html">Data Science</a></li>
+                        <li><a href="career-guidance.html">Career Guidance</a></li>
+                        <li><a href="trainers.html">Our Trainers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="community-events.html">Community Events</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Location & Contact</h3>
+                    <ul>
+                        <li>📍 Serving students worldwide, with roots in India</li>
+                        <li><a href="contact-us.html">Get in Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Lords Skill Academy. All rights reserved. | <strong>Affiliated with:</strong> Lords Institute of Engineering & Technology (LIET)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================
+         JAVASCRIPT - SMOOTH SCROLLING
+    =================================== -->
+    <script>
+        /**
+         * SMOOTH SCROLLING FOR ANCHOR LINKS
+         */
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                if (href === '#') {
+                    e.preventDefault();
+                    return;
+                }
+
+                const target = document.querySelector(href);
+                
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        /**
+         * PAGE LOAD ANIMATION - SUBTLE ENTRANCE
+         */
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'all 600ms ease';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        /**
+         * HAMBURGER MENU TOGGLE
+         */
+        (function() {
+            const hamburgerBtn = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('nav-menu');
+            
+            if (!hamburgerBtn || !navMenu) return;
+
+            hamburgerBtn.addEventListener('click', function() {
+                hamburgerBtn.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideHeader = event.target.closest('.header');
+                if (!isClickInsideHeader && navMenu.classList.contains('active')) {
+                    hamburgerBtn.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function() {
+            const glow = document.querySelector('.cursor-glow');
+            if (!glow) return;
+
+            let currentX = window.innerWidth / 2;
+            let currentY = window.innerHeight / 2;
+            let targetX = currentX;
+            let targetY = currentY;
+            let size = 24;
+            let t = 0;
+
+            function updateSize() {
+                size = glow.offsetWidth / 2 || 24;
+            }
+
+            updateSize();
+            window.addEventListener('resize', updateSize);
+
+            function animate() {
+                t += 0.04;
+                const wobbleX = Math.sin(t) * 4;
+                const wobbleY = Math.cos(t * 0.9) * 4;
+
+                currentX += (targetX - currentX) * 0.14;
+                currentY += (targetY - currentY) * 0.14;
+                glow.style.transform = `translate3d(${currentX - size + wobbleX}px, ${currentY - size + wobbleY}px, 0)`;
+                requestAnimationFrame(animate);
+            }
+
+            function parseRgb(color) {
+                const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/i);
+                if (!match) return null;
+                return {
+                    r: parseInt(match[1], 10),
+                    g: parseInt(match[2], 10),
+                    b: parseInt(match[3], 10),
+                    a: match[4] !== undefined ? parseFloat(match[4]) : 1
+                };
+            }
+
+            function getEffectiveBgColor(el) {
+                let node = el;
+                while (node && node !== document.documentElement) {
+                    const bg = window.getComputedStyle(node).backgroundColor;
+                    const rgb = parseRgb(bg);
+                    if (rgb && rgb.a > 0) {
+                        return rgb;
+                    }
+                    node = node.parentElement;
+                }
+                return { r: 255, g: 255, b: 255, a: 1 };
+            }
+
+            function updateGlowColor(x, y) {
+                const el = document.elementFromPoint(x, y);
+                if (!el) return;
+
+                const bg = getEffectiveBgColor(el);
+                const luminance = (0.2126 * bg.r + 0.7152 * bg.g + 0.0722 * bg.b) / 255;
+
+                if (luminance > 0.55) {
+                    glow.style.setProperty('--glow-core', 'rgba(37, 99, 235, 0.55)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.32)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 18px rgba(37, 99, 235, 0.35)';
+                } else {
+                    glow.style.setProperty('--glow-core', 'rgba(56, 189, 248, 0.6)');
+                    glow.style.setProperty('--glow-mid', 'rgba(59, 130, 246, 0.35)');
+                    glow.style.setProperty('--glow-edge', 'rgba(59, 130, 246, 0)');
+                    glow.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.32)';
+                }
+            }
+
+            window.addEventListener('mousemove', (event) => {
+                targetX = event.clientX;
+                targetY = event.clientY;
+                glow.style.opacity = '1';
+                updateGlowColor(event.clientX, event.clientY);
+            });
+
+            window.addEventListener('mouseleave', () => {
+                glow.style.opacity = '0';
+            });
+
+            animate();
+        })();
+
+        /**
+         * SCROLL REVEAL ANIMATION
+         * Elements fade in and slide up as they come into view
+         */
+        (function() {
+            if (!('IntersectionObserver' in window)) return;
+
+            const revealElements = document.querySelectorAll('.reveal');
+            if (revealElements.length === 0) return;
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach((el) => {
+                revealObserver.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
